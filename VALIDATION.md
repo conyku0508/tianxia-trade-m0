@@ -109,3 +109,5 @@ GitHub Actions run [40224953564](https://github.com/conyku0508/tianxia-trade-m0/
 UI限定修改 `MapPage.vue` 與 `art.css`，手機寬度<768px時改為小港口圓點＋21px高窄版名稱；泉州採紅金色。透明按鈕觸控範圍44×44px，並使用反向縮放保持視覺與觸控區固定。平板／桌面維持原樣。城市座標、fixture與services不變。
 
 `npm run build` 通過；`scripts/port-check.mjs` 六尺寸通過，20城標記存在，可在0.75／1／1.75倍點泉州，外地與長名稱摘要可用，Esc／關閉正常，市場30商品、現金5,000、無水平溢出或pageerror。三個手機尺寸量測觸控區均約44×44px，label高21px。結果與截圖在 `artifacts/compact-ports/`。實體手機/Safari仍待使用者驗收。
+
+正式站城市標記版本 `930ab68f2f49b3b0fc5803537dd2468af5e439e0` 的 Actions run40225519466建置與部署成功；正式HTTPS網址六尺寸port-check全數PASS，結果在 `artifacts/compact-ports/live/results.json`。手機三尺寸於0.75／1／1.75倍的觸控區實測約44×44px，非僅靜態CSS檢查。
