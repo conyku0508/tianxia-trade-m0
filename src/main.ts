@@ -3,4 +3,5 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router/routes";
 import "./styles/tokens.css";
+import "./styles/art.css";
 createApp(App).use(createPinia()).use(router).mount("#app");

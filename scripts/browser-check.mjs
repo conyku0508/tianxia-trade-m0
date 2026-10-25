@@ -1,6 +1,9 @@
 import { chromium } from "@playwright/test";
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
+const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:5174/";
+const outputDir = process.env.ARTIFACT_DIR ?? "artifacts";
+await fs.mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({
   executablePath:
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -20,7 +23,7 @@ try {
       page = await context.newPage();
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
-    await page.goto("http://127.0.0.1:5174");
+    await page.goto(baseUrl);
     await page.getByRole("button", { name: "選擇泉州", exact: true }).click();
     await page.getByRole("button", { name: "進入市場", exact: true }).click();
     await page
@@ -94,7 +97,7 @@ try {
       "route",
       "menu",
     ]) {
-      await page.goto("http://127.0.0.1:5174/#/" + path);
+      await page.goto(baseUrl + "#/" + path);
       await page.locator("h1").waitFor();
       const layout = await page.evaluate(() => ({
         overflow: document.documentElement.scrollWidth > innerWidth,
@@ -105,7 +108,7 @@ try {
       assert.ok(layout.bottom <= layout.viewport + 1);
       if (width === 390 || width === 1440)
         await page.screenshot({
-          path: `artifacts/${width}-${path}.png`,
+          path: `${outputDir}/${width}-${path}.png`,
           fullPage: true,
         });
     }
@@ -114,7 +117,7 @@ try {
       .click();
     await page.getByRole("button", { name: "確認重設", exact: true }).click();
     assert.match(await page.getByTestId("money").innerText(), /5,000/);
-    await page.goto("http://127.0.0.1:5174/#/market");
+    await page.goto(baseUrl + "#/market");
     await page
       .getByTestId("good-tea")
       .getByRole("button", { name: "買入", exact: true })
@@ -141,7 +144,7 @@ try {
 } finally {
   await browser.close();
   await fs.writeFile(
-    "artifacts/browser-results.json",
+    outputDir + "/browser-results.json",
     JSON.stringify(results, null, 2),
   );
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "01-world-map.png",
+    "title": "世界地圖",
+    "width": 853,
+    "height": 1844,
+    "bytes": 2955005,
+    "generator": "built-in image_gen",
+    "status": "concept proposal; not integrated"
+  },
+  {
+    "file": "02-quanzhou-market.png",
+    "title": "泉州市場",
+    "width": 853,
+    "height": 1844,
+    "bytes": 3027892,
+    "generator": "built-in image_gen",
+    "status": "concept proposal; not integrated"
+  },
+  {
+    "file": "03-cargo-hold.png",
+    "title": "商船貨艙",
+    "width": 853,
+    "height": 1844,
+    "bytes": 2730845,
+    "generator": "built-in image_gen",
+    "status": "concept proposal; not integrated"
+  },
+  {
+    "file": "04-trade-intelligence.png",
+    "title": "商路情報",
+    "width": 853,
+    "height": 1844,
+    "bytes": 2655637,
+    "generator": "built-in image_gen",
+    "status": "concept proposal; not integrated"
+  }
+]

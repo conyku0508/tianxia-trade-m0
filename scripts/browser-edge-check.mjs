@@ -1,6 +1,9 @@
 import { chromium } from "@playwright/test";
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
+const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:5174/";
+const outputDir = process.env.ARTIFACT_DIR ?? "artifacts";
+await fs.mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({
   executablePath:
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -17,7 +20,7 @@ try {
     [1440, 900],
   ]) {
     const page = await browser.newPage({ viewport: { width, height } });
-    await page.goto("http://127.0.0.1:5174/#/map");
+    await page.goto(baseUrl + "#/map");
     await page.getByRole("button", { name: "放大地圖" }).click();
     assert.match(
       await page.locator(".map-world").getAttribute("style"),
@@ -101,7 +104,7 @@ try {
       ),
       false,
     );
-    await page.screenshot({ path: `artifacts/${width}-viewport.png` });
+    await page.screenshot({ path: `${outputDir}/${width}-viewport.png` });
     results.push({
       width,
       height,
@@ -114,7 +117,7 @@ try {
 } finally {
   await browser.close();
   await fs.writeFile(
-    "artifacts/browser-edge-results.json",
+    outputDir + "/browser-edge-results.json",
     JSON.stringify(results, null, 2),
   );
 }

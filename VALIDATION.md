@@ -70,3 +70,26 @@
 `node scripts/live-check.mjs` 已在正式 HTTPS 網址完成 360×800、390×844、430×932、768×1024、1024×768、1440×900 六尺寸驗證。全部 HTTP 200、無 pageerror、無 4xx/5xx 資源。每尺寸走完 Map→City→Market→買茶2→Cargo→Intelligence→Route→Prepared，現金4,244、成本756／估值720／盈虧-36、舊情報與未知正確，刷新重回5,000。另實測手機 Sheet 全寬、平板桌面 Drawer 窄欄；商品列表手機一欄、平板桌面兩欄，沒有水平溢出。
 
 原始結果 `artifacts/live-results.json`；正式站截圖 `artifacts/live-*-prepared.png`。這是部署後 Chrome viewport 驗收，不代表實體手機或 Safari 已驗收。
+
+## 美術套版驗收｜2026-10-26
+
+使用者確認原四稿，另要求美化「已知行情」，確認 v2 後授權套用。實作採獨立場景與 atlas，Vue 文字／資產顯示、SVG 行情圖、城市 marker、Sheet、買賣控制保持可編輯與互動。
+
+### 範圍與不變量
+
+- UI：AppShell、四頁、SceneHero／ArtIcon、GoodsRow、PriceTrend、金框紙面樣式、導覽、載重條。市場全部列表優先茶葉／絲綢／瓷器。
+- Asset：4 場景、6 商品圖示 atlas、5 導覽圖示 atlas；六張執行 WebP 合計2,997,274 bytes。專用商品圖6種，其餘24種為共用貨箱，不宣稱已有30種獨立美術。
+- 原始PNG、確認稿、提示詞、manifest在art/；dist只含壓縮執行素材。沒有整張確認稿當作可操作頁面。
+- 未修改 TradeService、MarketService、RouteService、stores、contracts 或 mock-fixture。數值與記憶體重設規則不變。
+
+### 本機驗證
+
+- 最終 TypeScript 與 production build 通過（78 modules）；19項 service 測試通過。
+- 完整流程腳本六尺寸通過，買／賣／取消／MAX／prepared／重設／刷新維持正常，結果 `artifacts/art-release/flow/browser-results.json`。
+- 邊界腳本六尺寸通過：地圖拖曳縮放、最後一列操作不被底欄遮擋、數量鍵盤、Sheet／Modal焦點循環及Esc、長名稱／大金額版面，結果 `artifacts/art-release/edge/browser-edge-results.json`。
+- 美術腳本檢查六頁、圖片已解碼、所有30商品存在、真實買茶2與貨艙同步；情報只有2個已知行情及2條趨勢，逐筆比對馬六甲第8／10天470／500、琉球第7／9天650／680；亞丁沒有圖表與假日期。無水平溢出、pageerror或失敗資源。結果 `artifacts/art-release/art-results.json`。
+- 手機390與桌面1440主要頁面截圖已保存與目視檢查。圖例、商品名與報價為DOM，非烘焙字。初稿額外導覽符號已修正；截圖等待image.decode，避免將解碼前的空白當成最終畫面。桌面未知卡片自動伸展與原生灰色progress已調整。
+
+### 仍有限制
+
+實體手機／Safari／軟鍵盤尚未重新驗收；以上為Chrome headless viewport測試。插畫地理及建築為示意，不保證史實。沒有新航行、事件、經濟平衡或持久化。

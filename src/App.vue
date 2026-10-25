@@ -9,6 +9,7 @@ import {
 } from "./stores";
 import { useServices } from "./services";
 import { money } from "./data/presentation";
+import ArtIcon from "./components/ui/ArtIcon.vue";
 const game = useGameStore(),
   player = usePlayerStore(),
   cities = useCityStore(),
@@ -17,19 +18,28 @@ const game = useGameStore(),
   route = useRoute();
 const summary = computed(() => services.trade.cargoSummary());
 const nav = [
-  ["/map", "◎", "地圖"],
-  ["/market", "⚖", "市場"],
-  ["/cargo", "▣", "貨艙"],
-  ["/intelligence", "◈", "情報"],
-  ["/menu", "☰", "選單"],
+  ["/map", "map", "地圖"],
+  ["/market", "market", "市場"],
+  ["/cargo", "cargo", "貨艙"],
+  ["/intelligence", "intelligence", "情報"],
+  ["/menu", "menu", "選單"],
 ];
 </script>
 <template>
   <header class="top">
     <div class="top-line">
       <RouterLink to="/map" class="brand" style="text-decoration: none"
+        ><svg class="brand-ship" viewBox="0 0 40 36" aria-hidden="true">
+          <path d="M4 26h32l-7 7H11Z" fill="#d9b864" />
+          <path
+            d="M18 2v22H5Z M22 7v17h13Z"
+            fill="#edd39a"
+            stroke="#a98c48"
+            stroke-width="1"
+          />
+          <path d="M18 0v27M22 5v22" stroke="#c4a463" stroke-width="2" /></svg
         >天下商路</RouterLink
-      ><span class="prototype">M0 原型／模擬資料</span>
+      ><span class="prototype">M0 · 模擬資料</span>
     </div>
     <div class="status">
       <span
@@ -52,8 +62,7 @@ const nav = [
         active:
           route.path === path || (path === '/map' && route.path === '/route'),
       }"
-      ><b aria-hidden="true">{{ icon }}</b
-      >{{ label }}</RouterLink
+      ><ArtIcon :name="icon!" kind="nav" />{{ label }}</RouterLink
     >
   </nav>
   <div v-if="ui.toast" class="toast" role="status">{{ ui.toast }}</div>

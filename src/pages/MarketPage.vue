@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { goods } from "../data/fixture";
+import { featuredGoodIds } from "../data/assets";
 import { categories, money, percent } from "../data/presentation";
 import { useServices } from "../services";
 import { useCargoStore, useGameStore, useCityStore } from "../stores";
@@ -9,6 +10,7 @@ import GoodsRow from "../components/ui/GoodsRow.vue";
 import TradeControl from "../components/ui/TradeControl.vue";
 import GameButton from "../components/ui/GameButton.vue";
 import GamePanel from "../components/ui/GamePanel.vue";
+import SceneHero from "../components/ui/SceneHero.vue";
 const { market, trade } = useServices(),
   cargo = useCargoStore(),
   game = useGameStore(),
@@ -16,20 +18,27 @@ const { market, trade } = useServices(),
   filter = ref("all"),
   draft = ref<{ good: Good; mode: TradeMode } | null>(null);
 const quotes = computed(() => market.list(game.currentCityId));
-const list = computed(() =>
-  goods.filter((g) => filter.value === "all" || g.category === filter.value),
-);
+const list = computed(() => {
+  const rank = (id: string) => {
+    const index = featuredGoodIds.indexOf(id);
+    return index < 0 ? featuredGoodIds.length : index;
+  };
+  return goods
+    .filter((g) => filter.value === "all" || g.category === filter.value)
+    .sort((a, b) => rank(a.id) - rank(b.id));
+});
 const summary = computed(() => trade.cargoSummary());
 </script>
 <template>
-  <div class="page-head">
-    <div class="eyebrow">THE MERCHANT'S EXCHANGE</div>
-    <h1>{{ cities.byId[game.currentCityId]?.name }}市場</h1>
-    <p>
-      滿載而歸，始於一筆好交易。城市稅
-      {{ percent(cities.byId[game.currentCityId]!.taxRate) }} · 固定模擬報價
-    </p>
-  </div>
+  <SceneHero
+    scene="market"
+    :title="cities.byId[game.currentCityId]?.name + '市場'"
+    :subtitle="
+      '百貨雲集 · 城市稅 ' +
+      percent(cities.byId[game.currentCityId]!.taxRate) +
+      ' · 模擬報價'
+    "
+  />
   <div class="filters" aria-label="商品分類">
     <GameButton
       secondary

@@ -2,16 +2,15 @@
 import type { Good, MarketItem, CargoItem } from "../../contracts/game";
 import GameButton from "./GameButton.vue";
 import GamePanel from "./GamePanel.vue";
-import { money, symbols, categories } from "../../data/presentation";
+import ArtIcon from "./ArtIcon.vue";
+import { money, categories } from "../../data/presentation";
 defineProps<{ good: Good; quote: MarketItem; held?: CargoItem }>();
 defineEmits<{ trade: [mode: "buy" | "sell"] }>();
 </script>
 <template>
   <GamePanel class="goods-row" :data-testid="'good-' + good.id"
     ><div class="goods-top">
-      <div class="good-icon" aria-hidden="true">
-        {{ symbols[good.category] }}
-      </div>
+      <ArtIcon :name="good.id" class="commodity-art" />
       <div class="goods-name">
         <h3>{{ good.name }}</h3>
         <small

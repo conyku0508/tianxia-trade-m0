@@ -7,6 +7,8 @@ import { useServices } from "../services";
 import { percent } from "../data/presentation";
 import GameButton from "../components/ui/GameButton.vue";
 import Overlay from "../components/ui/Overlay.vue";
+import ArtIcon from "../components/ui/ArtIcon.vue";
+import { art } from "../data/assets";
 const cities = useCityStore(),
   game = useGameStore(),
   router = useRouter(),
@@ -46,7 +48,7 @@ const names = (ids: string[]) =>
 </script>
 <template>
   <div class="page-head">
-    <div class="eyebrow">A WORLD OF POSSIBILITIES</div>
+    <div class="eyebrow">海圖卷 · 二十港</div>
     <h1>四海通商圖</h1>
     <p>從泉州起航，讓每一次遠行皆有所獲。</p>
   </div>
@@ -74,35 +76,13 @@ const names = (ids: string[]) =>
     >
       <div :style="{ width: 1000 * zoom + 'px', height: 740 * zoom + 'px' }">
         <div class="map-world" :style="{ transform: `scale(${zoom})` }">
-          <svg viewBox="0 0 1000 740" aria-hidden="true">
-            <defs>
-              <pattern
-                id="land"
-                width="12"
-                height="12"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect width="12" height="12" fill="#bfc39b" />
-                <path d="M0 12 12 0" stroke="#8da17f" stroke-width=".5" />
-              </pattern>
-            </defs>
-            <path
-              d="M0 0H820L800 55 735 90 740 155 712 215 735 270 695 310 625 355 615 410 560 430 570 485 535 520 510 600 480 575 465 510 425 455 390 430 350 390 335 480 300 485 260 430 230 360 180 350 135 300 100 370 50 390 0 350Z"
-              fill="url(#land)"
-              stroke="#e2d4a8"
-              stroke-width="3"
-            />
-            <path
-              d="M840 130l-20 45 8 35-35 35 12 15 45-35 18-50Z M754 335l-12 30 14 25 10-40Z M450 595l45 12 60 55-12 18-70-50Z M565 660l90 8 25 18-105-9Z"
-              fill="url(#land)"
-              stroke="#e2d4a8"
-              stroke-width="2"
-            />
-            <g fill="none" stroke="#d5c588" opacity=".5">
-              <path
-                d="M400 120l18-30 20 30 18-25 20 28 M550 220l20-35 20 35 18-23 15 23 M320 280l18-35 18 35"
-              />
-            </g>
+          <img
+            :src="art.worldMap"
+            alt=""
+            class="map-painting"
+            fetchpriority="high"
+            decoding="async"
+          /><svg viewBox="0 0 1000 740" aria-hidden="true">
             <path
               v-for="r in route.listFrom(game.currentCityId)"
               :key="r.id"
@@ -153,12 +133,22 @@ const names = (ids: string[]) =>
     </div>
   </details>
   <Overlay v-if="city" :title="city.name" @close="selected = null"
-    ><span class="pill">{{
+    ><img
+      v-if="city.id === game.currentCityId"
+      :src="art.market"
+      class="city-scene"
+      alt="泉州港市景"
+    /><span class="pill">{{
       city.id === game.currentCityId
         ? "所在港口 · 大型海港"
         : "示意港口 · 模擬摘要"
     }}</span>
     <h3 class="info-space">海路交會，百貨雲集</h3>
+    <div v-if="city.produces.length" class="city-goods">
+      <div v-for="id in city.produces" :key="id">
+        <ArtIcon :name="id" /><small>{{ names([id]) }}</small>
+      </div>
+    </div>
     <dl class="summary">
       <dt>主要出產</dt>
       <dd>{{ names(city.produces) }}</dd>

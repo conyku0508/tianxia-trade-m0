@@ -1,0 +1,92 @@
+[
+  {
+    "id": "world-map",
+    "source": "art/runtime-source/world-map.png",
+    "runtime": "src/assets/art/world-map.webp",
+    "size": [
+      1448,
+      1086
+    ],
+    "bytes": 692054,
+    "hasAlpha": false,
+    "sha256": "2fba67f788f860d8fb6beb794e13cccbf0b2453d8f47bf5adecc0a6323042d3d",
+    "generator": "built-in image_gen",
+    "provenance": "approved concepts v1; intelligence v2",
+    "processing": "WebP encoding only; no raster crop or paint"
+  },
+  {
+    "id": "quanzhou-market",
+    "source": "art/runtime-source/quanzhou-market.png",
+    "runtime": "src/assets/art/quanzhou-market.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 572180,
+    "hasAlpha": false,
+    "sha256": "ee84df33a7f4906c7f2c32126757e3f7c4d6b80a636821715f9a321f89be0e93",
+    "generator": "built-in image_gen",
+    "provenance": "approved concepts v1; intelligence v2",
+    "processing": "WebP encoding only; no raster crop or paint"
+  },
+  {
+    "id": "cargo-hold",
+    "source": "art/runtime-source/cargo-hold.png",
+    "runtime": "src/assets/art/cargo-hold.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 484332,
+    "hasAlpha": false,
+    "sha256": "a3b72360dcc28d2e73c1dbd1324946d303c037f0557a6de273d7ab79151032fd",
+    "generator": "built-in image_gen",
+    "provenance": "approved concepts v1; intelligence v2",
+    "processing": "WebP encoding only; no raster crop or paint"
+  },
+  {
+    "id": "intelligence-desk",
+    "source": "art/runtime-source/intelligence-desk.png",
+    "runtime": "src/assets/art/intelligence-desk.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 450738,
+    "hasAlpha": false,
+    "sha256": "612f305419d8646174f668a6c335a3a7069f7a0bce2ee987a3218871107db22e",
+    "generator": "built-in image_gen",
+    "provenance": "approved concepts v1; intelligence v2",
+    "processing": "WebP encoding only; no raster crop or paint"
+  },
+  {
+    "id": "goods-atlas",
+    "source": "art/runtime-source/goods-atlas.png",
+    "runtime": "src/assets/art/goods-atlas.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "bytes": 444108,
+    "hasAlpha": true,
+    "sha256": "63c9e6850f3bfd925f9a39469a34eb714f99e8c4bc1f1617766d9edbb9ebdd07",
+    "generator": "built-in image_gen",
+    "provenance": "approved concepts v1; intelligence v2",
+    "processing": "WebP encoding only; no raster crop or paint"
+  },
+  {
+    "id": "navigation-atlas",
+    "source": "art/runtime-source/navigation-atlas.png",
+    "runtime": "src/assets/art/navigation-atlas.webp",
+    "size": [
+      2172,
+      724
+    ],
+    "bytes": 353862,
+    "hasAlpha": true,
+    "sha256": "7f0582646497d9bfd6a81e8dc773118da6565a7c7cda30c9837d7e17b0992fb2",
+    "generator": "built-in image_gen",
+    "provenance": "approved concepts v1; intelligence v2",
+    "processing": "WebP encoding only; no raster crop or paint"
+  }
+]

@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useServices } from "../services";
-import { money, symbols } from "../data/presentation";
+import { money } from "../data/presentation";
 import GamePanel from "../components/ui/GamePanel.vue";
 import GameButton from "../components/ui/GameButton.vue";
+import ArtIcon from "../components/ui/ArtIcon.vue";
+import SceneHero from "../components/ui/SceneHero.vue";
 const { trade } = useServices(),
   summary = computed(() => trade.cargoSummary()),
   rows = computed(() => trade.cargoRows());
 </script>
 <template>
-  <div class="page-head">
-    <div class="eyebrow">THE HOLD & THE HORIZON</div>
-    <h1>商船貨艙</h1>
-    <p>一艙貨物，一段海路。所有持貨與市場即時同步。</p>
-  </div>
+  <SceneHero
+    scene="cargo"
+    title="商船貨艙"
+    subtitle="一艙貨物，一段海路。妥善裝載，從容遠行。"
+  />
   <div class="cargo-layout">
     <GamePanel
       ><h2>載重 {{ summary.usedWeight }} / {{ summary.capacity }}</h2>
@@ -37,15 +39,15 @@ const { trade } = useServices(),
     >
     <div>
       <GamePanel v-if="!rows.length" class="empty"
-        ><div class="empty-symbol">▣</div>
+        ><ArtIcon name="cargo" kind="nav" class="empty-art" />
         <h2>貨艙尚無貨物</h2>
         <p class="info-space">前往泉州市場，開始第一筆交易。</p>
         <div class="actions">
           <GameButton @click="$router.push('/market')">前往市場</GameButton>
         </div></GamePanel
-      ><GamePanel v-for="row in rows" :key="row.goodId"
+      ><GamePanel v-for="row in rows" :key="row.goodId" class="cargo-card"
         ><div class="goods-top">
-          <div class="good-icon">{{ symbols[row.good.category] }}</div>
+          <ArtIcon :name="row.goodId" class="cargo-art" />
           <h2>{{ row.good.name }}</h2>
           <strong style="margin-left: auto">× {{ row.quantity }}</strong>
         </div>
