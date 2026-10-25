@@ -91,3 +91,5 @@ RWD：小於 768px 為單欄與底部 Sheet；768–1199px 重排為雙區塊與
 美術六尺寸驗收：`node scripts/art-check.mjs`。可設定 `BASE_URL` 測正式站、`ARTIFACT_DIR` 指定輸出；結果位於 `artifacts/art-release/`。原始 UI 邊界與交易流程腳本也支援這兩個環境變數。
 
 美術版已上線：[手機試玩](https://conyku0508.github.io/tianxia-trade-m0/?release=art-v1-20261026)。部署後六尺寸實測通過，結果 `artifacts/art-release/live/art-results.json`。
+
+手機港口標記已改為小圓點與窄版名稱，保留44×44px觸控區，縮放時大小固定。驗收腳本：`node scripts/port-check.mjs`，支援BASE_URL／ARTIFACT_DIR。

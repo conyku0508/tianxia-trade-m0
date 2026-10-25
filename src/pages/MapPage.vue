@@ -75,7 +75,10 @@ const names = (ids: string[]) =>
       @pointercancel="drag = null"
     >
       <div :style="{ width: 1000 * zoom + 'px', height: 740 * zoom + 'px' }">
-        <div class="map-world" :style="{ transform: `scale(${zoom})` }">
+        <div
+          class="map-world"
+          :style="{ transform: `scale(${zoom})`, '--marker-scale': 1 / zoom }"
+        >
           <img
             :src="art.worldMap"
             alt=""
@@ -110,9 +113,19 @@ const names = (ids: string[]) =>
               top: c.position.y * 100 + '%',
             }"
             :aria-label="'選擇' + c.name"
+            :aria-pressed="selected === c.id"
+            :aria-current="c.id === game.currentCityId ? 'location' : undefined"
             @click="selected = c.id"
           >
-            {{ c.id === game.currentCityId ? "⚑ " : "" }}{{ c.name }}
+            <span class="city-pin" aria-hidden="true" />
+            <span class="city-label"
+              ><span
+                v-if="c.id === game.currentCityId"
+                class="city-current-flag"
+                aria-hidden="true"
+                >⚑ </span
+              >{{ c.name }}</span
+            >
           </button>
         </div>
       </div>

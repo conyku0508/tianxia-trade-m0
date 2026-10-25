@@ -102,3 +102,10 @@ GitHub Actions run [40224953564](https://github.com/conyku0508/tianxia-trade-m0/
 正式站 https://conyku0508.github.io/tianxia-trade-m0/?release=art-v1-20261026 已完成六尺寸 `scripts/art-check.mjs`：360×800、390×844、430×932、768×1024、1024×768、1440×900 全部 PASS。每尺寸走六頁、實際買茶2、檢查現金4,244／成本756／估值720／盈虧−36與已知行情觀察點。沒有 pageerror、失敗資源或水平溢出，所有實際img已解碼。原始結果及截圖在 `artifacts/art-release/live/`。
 
 這是部署後 Chrome 實測，沒有把前一輪手機能開啟的回覆當作新版 Safari／實體手機驗收。正式裝置仍請使用者試玩。
+
+
+## 手機城市標記縮小｜2026-10-26
+
+UI限定修改 `MapPage.vue` 與 `art.css`，手機寬度<768px時改為小港口圓點＋21px高窄版名稱；泉州採紅金色。透明按鈕觸控範圍44×44px，並使用反向縮放保持視覺與觸控區固定。平板／桌面維持原樣。城市座標、fixture與services不變。
+
+`npm run build` 通過；`scripts/port-check.mjs` 六尺寸通過，20城標記存在，可在0.75／1／1.75倍點泉州，外地與長名稱摘要可用，Esc／關閉正常，市場30商品、現金5,000、無水平溢出或pageerror。三個手機尺寸量測觸控區均約44×44px，label高21px。結果與截圖在 `artifacts/compact-ports/`。實體手機/Safari仍待使用者驗收。

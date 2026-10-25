@@ -1,0 +1,143 @@
+{
+  "base": "http://127.0.0.1:5174/",
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "status": "PASS",
+      "measurements": [
+        {
+          "zoom": 1,
+          "touchWidth": 44,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 0.75,
+          "touchWidth": 44,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 1.75,
+          "touchWidth": 44.0001220703125,
+          "touchHeight": 44
+        }
+      ],
+      "checks": "20 ports; current/foreign/long-label click; 0.75/1/1.75 zoom; Sheet/Escape/focus; market30; money5000; no overflow/pageerror"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "PASS",
+      "measurements": [
+        {
+          "zoom": 1,
+          "touchWidth": 44,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 0.75,
+          "touchWidth": 44,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 1.75,
+          "touchWidth": 44.0001220703125,
+          "touchHeight": 44
+        }
+      ],
+      "checks": "20 ports; current/foreign/long-label click; 0.75/1/1.75 zoom; Sheet/Escape/focus; market30; money5000; no overflow/pageerror"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "status": "PASS",
+      "measurements": [
+        {
+          "zoom": 1,
+          "touchWidth": 44,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 0.75,
+          "touchWidth": 44,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 1.75,
+          "touchWidth": 44.0001220703125,
+          "touchHeight": 44
+        }
+      ],
+      "checks": "20 ports; current/foreign/long-label click; 0.75/1/1.75 zoom; Sheet/Escape/focus; market30; money5000; no overflow/pageerror"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "status": "PASS",
+      "measurements": [
+        {
+          "zoom": 1,
+          "touchWidth": 62.78125,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 0.75,
+          "touchWidth": 47.0859375,
+          "touchHeight": 33
+        },
+        {
+          "zoom": 1.75,
+          "touchWidth": 109.8671875,
+          "touchHeight": 77
+        }
+      ],
+      "checks": "20 ports; current/foreign/long-label click; 0.75/1/1.75 zoom; Sheet/Escape/focus; market30; money5000; no overflow/pageerror"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "status": "PASS",
+      "measurements": [
+        {
+          "zoom": 1,
+          "touchWidth": 62.78125,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 0.75,
+          "touchWidth": 47.0859375,
+          "touchHeight": 33
+        },
+        {
+          "zoom": 1.75,
+          "touchWidth": 109.8671875,
+          "touchHeight": 77
+        }
+      ],
+      "checks": "20 ports; current/foreign/long-label click; 0.75/1/1.75 zoom; Sheet/Escape/focus; market30; money5000; no overflow/pageerror"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "PASS",
+      "measurements": [
+        {
+          "zoom": 1,
+          "touchWidth": 62.78125,
+          "touchHeight": 44
+        },
+        {
+          "zoom": 0.75,
+          "touchWidth": 47.0859375,
+          "touchHeight": 33
+        },
+        {
+          "zoom": 1.75,
+          "touchWidth": 109.8671875,
+          "touchHeight": 77
+        }
+      ],
+      "checks": "20 ports; current/foreign/long-label click; 0.75/1/1.75 zoom; Sheet/Escape/focus; market30; money5000; no overflow/pageerror"
+    }
+  ]
+}
