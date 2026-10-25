@@ -67,12 +67,14 @@ npm run preview  # 預覽 dist
 
 ## GitHub Pages 與手機測試
 
-預定儲存庫（尚未建立；等待公開性確認）：https://github.com/conyku0508/tianxia-trade-m0
+公開儲存庫：https://github.com/conyku0508/tianxia-trade-m0
 
-預定手機測試網址（尚未上線）：https://conyku0508.github.io/tianxia-trade-m0/
+已上線手機測試網址：https://conyku0508.github.io/tianxia-trade-m0/
 
 使用手機 Safari／Chrome 直接開啟，不需要同 Wi-Fi 或啟動電腦終端機。手機瀏覽器請使用一般行動版模式；若開啟「要求桌面網站」，可能套用桌面斷點。刷新會回 fixture，沒有跨裝置同步。
 
 RWD：小於 768px 為單欄與底部 Sheet；768–1199px 重排為雙區塊與側 Drawer；1200px 以上市場為雙欄商品＋摘要側欄。手機與桌面共用同一份 state/service。
 
 推送 main 後，`.github/workflows/pages.yml` 自動執行 npm ci、19 項測試、型別檢查、建置與 Pages 發佈。Vite base='./' 搭配 hash router，支援儲存庫子路徑。重新部署後可在網址加 `?release=版本` 避免舊頁面快取；資源檔另有內容 hash。
+
+正式站已於 2026-10-26 完成六尺寸 Chrome 主流程驗證，HTTP 200、無 pageerror／失敗資源，手機市場一欄、平板桌面兩欄。結果在 `artifacts/live-results.json`，重跑指令 `node scripts/live-check.mjs`。實體 iOS／Android 與 Safari 仍待裝置測試。

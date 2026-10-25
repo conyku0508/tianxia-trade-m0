@@ -9,35 +9,35 @@
 
 ## 22 算例覆蓋
 
-| Case | 實測方式與結果 |
-|---|---|
-| A01 | 瀏覽器六尺寸：地圖點泉州、城市 Sheet、進市場；service 驗 20 城／30 商品與外鍵。通過。 |
-| A02 | 瀏覽器取消確認回交易 Sheet，現金維持 5,000；service 預覽前後完整資產一致。通過。 |
+| Case     | 實測方式與結果                                                                                                 |
+| -------- | -------------------------------------------------------------------------------------------------------------- |
+| A01      | 瀏覽器六尺寸：地圖點泉州、城市 Sheet、進市場；service 驗 20 城／30 商品與外鍵。通過。                          |
+| A02      | 瀏覽器取消確認回交易 Sheet，現金維持 5,000；service 預覽前後完整資產一致。通過。                               |
 | A03／A04 | service 精確驗 4,244／茶2／均成本378／庫存18／重量2／成本756／估值720／盈虧-36；瀏覽器驗現金及貨艙顯示。通過。 |
-| A05 | service 與瀏覽器驗 2 天前、3 天前及 null 未知；趨勢只取 knowledge.history。通過。 |
-| A06／A07 | service 比較完整資產狀態不變；瀏覽器驗 prepared／取消與現金不變。通過。 |
-| A08 | service 驗 4,586／茶1／avg378／stock19／weight1；瀏覽器驗買2再賣1及現金。通過。 |
-| A09／A10 | service 驗茶13、木材14與茶 MAX 成交餘額86；瀏覽器驗茶 MAX 顯示13與餘額86。通過。 |
-| A11 | service 驗 0、負值、小數、NaN、Infinity、超庫存，各次零副作用；瀏覽器驗輸入0的錯誤。通過。 |
-| A12 | service 以 money=0／capacity=1 變體驗不足、超重、超額賣出且零副作用。通過。 |
-| A13 | service 驗同 request 二次確認回 STALE_PREVIEW；瀏覽器雙擊確認後現金只扣一次。通過。 |
-| A14 | 瀏覽器六入口頁與固定五入口切換，資產持續同步；價格只讀固定 MarketService。通過。 |
-| A15 | service 驗 reset 提高 revision、舊 request 失效；瀏覽器驗重設回5,000，RouterView resetKey 清草稿。通過。 |
-| A16 | service 驗 money／range 變體拒絕且保留既有 prepared、資產不變。通過。 |
-| A17 | 瀏覽器 MAX 成交後 reload 回5,000；README與選單顯示 memory-only。通過。 |
+| A05      | service 與瀏覽器驗 2 天前、3 天前及 null 未知；趨勢只取 knowledge.history。通過。                              |
+| A06／A07 | service 比較完整資產狀態不變；瀏覽器驗 prepared／取消與現金不變。通過。                                        |
+| A08      | service 驗 4,586／茶1／avg378／stock19／weight1；瀏覽器驗買2再賣1及現金。通過。                                |
+| A09／A10 | service 驗茶13、木材14與茶 MAX 成交餘額86；瀏覽器驗茶 MAX 顯示13與餘額86。通過。                               |
+| A11      | service 驗 0、負值、小數、NaN、Infinity、超庫存，各次零副作用；瀏覽器驗輸入0的錯誤。通過。                     |
+| A12      | service 以 money=0／capacity=1 變體驗不足、超重、超額賣出且零副作用。通過。                                    |
+| A13      | service 驗同 request 二次確認回 STALE_PREVIEW；瀏覽器雙擊確認後現金只扣一次。通過。                            |
+| A14      | 瀏覽器六入口頁與固定五入口切換，資產持續同步；價格只讀固定 MarketService。通過。                               |
+| A15      | service 驗 reset 提高 revision、舊 request 失效；瀏覽器驗重設回5,000，RouterView resetKey 清草稿。通過。       |
+| A16      | service 驗 money／range 變體拒絕且保留既有 prepared、資產不變。通過。                                          |
+| A17      | 瀏覽器 MAX 成交後 reload 回5,000；README與選單顯示 memory-only。通過。                                         |
 
 另測：模式不符、錯誤城市、未知商品；全數賣出移除貨物；買入成本維持精度；缺當地報價時估值為 null。
 
 ## 六尺寸結果
 
 | Viewport | 主流程與六頁 | 補充邊界 |
-|---|---|---|
-| 360×800 | PASS | PASS |
-| 390×844 | PASS | PASS |
-| 430×932 | PASS | PASS |
-| 768×1024 | PASS | PASS |
-| 1024×768 | PASS | PASS |
-| 1440×900 | PASS | PASS |
+| -------- | ------------ | -------- |
+| 360×800  | PASS         | PASS     |
+| 390×844  | PASS         | PASS     |
+| 430×932  | PASS         | PASS     |
+| 768×1024 | PASS         | PASS     |
+| 1024×768 | PASS         | PASS     |
+| 1440×900 | PASS         | PASS     |
 
 主流程：Map→City→Market→取消→買茶→Cargo→Intelligence→Route→Prepared→取消→賣茶→五入口→重設→MAX→刷新。每尺寸六頁檢查 document 無水平溢出、導覽底部未越界，沒有 pageerror。
 
@@ -63,4 +63,10 @@
 
 已確認手機 viewport、768px／1200px RWD 斷點；Vite 加入相對 base，新增 `.github/workflows/pages.yml`。調整後 `npm run build` 與 19 項 service 測試通過。已確認本機 GitHub 登入帳號 conyku0508 可用。
 
-遠端儲存庫尚未建立。建立公開儲存庫被自動批准審查拒絕，需由使用者明確確認公開性；沒有繞過審查。正式網址、GitHub Actions 及部署後手機 viewport 驗收尚未執行。
+使用者明確同意公開後，已建立公開儲存庫 https://github.com/conyku0508/tianxia-trade-m0 ，啟用 Pages workflow 並發佈 https://conyku0508.github.io/tianxia-trade-m0/ 。
+
+首次 GitHub Actions run 40219934283 完成 success，雲端 npm ci、npm test、npm run build 與 Pages deployment 均成功。首次部署對應 commit `0ad553a2ec9a5c6f27feabb4c1b095758df8d40e`。
+
+`node scripts/live-check.mjs` 已在正式 HTTPS 網址完成 360×800、390×844、430×932、768×1024、1024×768、1440×900 六尺寸驗證。全部 HTTP 200、無 pageerror、無 4xx/5xx 資源。每尺寸走完 Map→City→Market→買茶2→Cargo→Intelligence→Route→Prepared，現金4,244、成本756／估值720／盈虧-36、舊情報與未知正確，刷新重回5,000。另實測手機 Sheet 全寬、平板桌面 Drawer 窄欄；商品列表手機一欄、平板桌面兩欄，沒有水平溢出。
+
+原始結果 `artifacts/live-results.json`；正式站截圖 `artifacts/live-*-prepared.png`。這是部署後 Chrome viewport 驗收，不代表實體手機或 Safari 已驗收。

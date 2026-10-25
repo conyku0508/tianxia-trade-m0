@@ -1,0 +1,65 @@
+{
+  "url": "https://conyku0508.github.io/tianxia-trade-m0/",
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "status": "PASS",
+      "http": 200,
+      "gridColumns": 1,
+      "flow": "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "PASS",
+      "http": 200,
+      "gridColumns": 1,
+      "flow": "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "status": "PASS",
+      "http": 200,
+      "gridColumns": 1,
+      "flow": "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "status": "PASS",
+      "http": 200,
+      "gridColumns": 2,
+      "flow": "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "status": "PASS",
+      "http": 200,
+      "gridColumns": 2,
+      "flow": "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "PASS",
+      "http": 200,
+      "gridColumns": 2,
+      "flow": "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      "errors": [],
+      "badResponses": []
+    }
+  ]
+}
