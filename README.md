@@ -67,9 +67,9 @@ npm run preview  # 預覽 dist
 
 ## GitHub Pages 與手機測試
 
-儲存庫：https://github.com/conyku0508/tianxia-trade-m0
+預定儲存庫（尚未建立；等待公開性確認）：https://github.com/conyku0508/tianxia-trade-m0
 
-手機測試網址：https://conyku0508.github.io/tianxia-trade-m0/
+預定手機測試網址（尚未上線）：https://conyku0508.github.io/tianxia-trade-m0/
 
 使用手機 Safari／Chrome 直接開啟，不需要同 Wi-Fi 或啟動電腦終端機。手機瀏覽器請使用一般行動版模式；若開啟「要求桌面網站」，可能套用桌面斷點。刷新會回 fixture，沒有跨裝置同步。
 

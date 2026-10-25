@@ -58,3 +58,9 @@
 本次是本機 Chrome headless 的 viewport／DOM／pointer／鍵盤測試。未測實體手機、iOS Safari、Android Chrome、觸控手勢與軟鍵盤彈出後的 visual viewport／安全區差異，也未做完整 WCAG 對比量測。Sheet 限高並可內捲，未聲稱完成真手機軟鍵盤遮擋驗收。
 
 文件包未提供四張圖片，所以使用 Suggested Tokens 與 SVG／文字 placeholder；沒有逐像素視覺比對。正式資料、正式經濟引擎、航行結算與正式持久化均未實作或驗證。
+
+## GitHub Pages 發佈準備
+
+已確認手機 viewport、768px／1200px RWD 斷點；Vite 加入相對 base，新增 `.github/workflows/pages.yml`。調整後 `npm run build` 與 19 項 service 測試通過。已確認本機 GitHub 登入帳號 conyku0508 可用。
+
+遠端儲存庫尚未建立。建立公開儲存庫被自動批准審查拒絕，需由使用者明確確認公開性；沒有繞過審查。正式網址、GitHub Actions 及部署後手機 viewport 驗收尚未執行。
