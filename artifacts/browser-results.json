@@ -1,0 +1,38 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "status": "PASS",
+    "flow": "Map→City→Market, cancel/buy/sell/MAX, Cargo/knowledge, prepare/cancel, reset/reload, six pages overflow/navigation, Escape/focus"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "status": "PASS",
+    "flow": "Map→City→Market, cancel/buy/sell/MAX, Cargo/knowledge, prepare/cancel, reset/reload, six pages overflow/navigation, Escape/focus"
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "status": "PASS",
+    "flow": "Map→City→Market, cancel/buy/sell/MAX, Cargo/knowledge, prepare/cancel, reset/reload, six pages overflow/navigation, Escape/focus"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "status": "PASS",
+    "flow": "Map→City→Market, cancel/buy/sell/MAX, Cargo/knowledge, prepare/cancel, reset/reload, six pages overflow/navigation, Escape/focus"
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "status": "PASS",
+    "flow": "Map→City→Market, cancel/buy/sell/MAX, Cargo/knowledge, prepare/cancel, reset/reload, six pages overflow/navigation, Escape/focus"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "status": "PASS",
+    "flow": "Map→City→Market, cancel/buy/sell/MAX, Cargo/knowledge, prepare/cancel, reset/reload, six pages overflow/navigation, Escape/focus"
+  }
+]

@@ -1,0 +1,998 @@
+{
+  "player": {
+    "id": "player",
+    "name": "商路新客",
+    "money": 5000,
+    "transport": {
+      "id": "starter_transport",
+      "name": "小型商船",
+      "cargoCapacity": 100,
+      "speed": 1,
+      "rangeDays": 20
+    }
+  },
+  "game": {
+    "currentCityId": "quanzhou",
+    "currentDay": 12
+  },
+  "goods": [
+    {
+      "id": "rice",
+      "name": "稻米",
+      "category": "food",
+      "basePrice": 80,
+      "weight": 4,
+      "icon": "good:rice",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "wheat",
+      "name": "小麥",
+      "category": "food",
+      "basePrice": 120,
+      "weight": 2,
+      "icon": "good:wheat",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "salt",
+      "name": "鹽",
+      "category": "food",
+      "basePrice": 130,
+      "weight": 2,
+      "icon": "good:salt",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "sugar",
+      "name": "糖",
+      "category": "food",
+      "basePrice": 140,
+      "weight": 2,
+      "icon": "good:sugar",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "dried_fish",
+      "name": "魚乾",
+      "category": "food",
+      "basePrice": 150,
+      "weight": 2,
+      "icon": "good:dried_fish",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "tea",
+      "name": "普通茶葉",
+      "category": "agriculture",
+      "basePrice": 360,
+      "weight": 1,
+      "icon": "good:tea",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "herbs",
+      "name": "藥草",
+      "category": "agriculture",
+      "basePrice": 170,
+      "weight": 2,
+      "icon": "good:herbs",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "ginseng",
+      "name": "人參",
+      "category": "agriculture",
+      "basePrice": 180,
+      "weight": 2,
+      "icon": "good:ginseng",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "aromatic_wood",
+      "name": "香木",
+      "category": "agriculture",
+      "basePrice": 190,
+      "weight": 2,
+      "icon": "good:aromatic_wood",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "camphor",
+      "name": "樟腦",
+      "category": "agriculture",
+      "basePrice": 200,
+      "weight": 2,
+      "icon": "good:camphor",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "timber",
+      "name": "木材",
+      "category": "agriculture",
+      "basePrice": 120,
+      "weight": 7,
+      "icon": "good:timber",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "cotton_cloth",
+      "name": "棉布",
+      "category": "textile",
+      "basePrice": 220,
+      "weight": 2,
+      "icon": "good:cotton_cloth",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "cloth",
+      "name": "普通布匹",
+      "category": "textile",
+      "basePrice": 230,
+      "weight": 2,
+      "icon": "good:cloth",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "silk",
+      "name": "普通絲綢",
+      "category": "textile",
+      "basePrice": 850,
+      "weight": 1,
+      "icon": "good:silk",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "dye",
+      "name": "染料",
+      "category": "textile",
+      "basePrice": 250,
+      "weight": 2,
+      "icon": "good:dye",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "pottery",
+      "name": "陶器",
+      "category": "craft",
+      "basePrice": 260,
+      "weight": 2,
+      "icon": "good:pottery",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "porcelain",
+      "name": "普通瓷器",
+      "category": "craft",
+      "basePrice": 520,
+      "weight": 3,
+      "icon": "good:porcelain",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "paper",
+      "name": "紙張",
+      "category": "craft",
+      "basePrice": 280,
+      "weight": 2,
+      "icon": "good:paper",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "books",
+      "name": "書籍",
+      "category": "craft",
+      "basePrice": 290,
+      "weight": 2,
+      "icon": "good:books",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "lacquerware",
+      "name": "漆器",
+      "category": "craft",
+      "basePrice": 300,
+      "weight": 2,
+      "icon": "good:lacquerware",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "ironware",
+      "name": "鐵器",
+      "category": "metal",
+      "basePrice": 310,
+      "weight": 2,
+      "icon": "good:ironware",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "copperware",
+      "name": "銅器",
+      "category": "metal",
+      "basePrice": 320,
+      "weight": 2,
+      "icon": "good:copperware",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "silver",
+      "name": "銀",
+      "category": "metal",
+      "basePrice": 330,
+      "weight": 2,
+      "icon": "good:silver",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "saddlery",
+      "name": "馬具",
+      "category": "metal",
+      "basePrice": 340,
+      "weight": 2,
+      "icon": "good:saddlery",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "blades",
+      "name": "刀具",
+      "category": "metal",
+      "basePrice": 350,
+      "weight": 2,
+      "icon": "good:blades",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "spice",
+      "name": "香料",
+      "category": "luxury",
+      "basePrice": 950,
+      "weight": 1,
+      "icon": "good:spice",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "frankincense",
+      "name": "乳香",
+      "category": "luxury",
+      "basePrice": 370,
+      "weight": 2,
+      "icon": "good:frankincense",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "jewelry",
+      "name": "珠寶",
+      "category": "luxury",
+      "basePrice": 380,
+      "weight": 2,
+      "icon": "good:jewelry",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "ivory",
+      "name": "象牙",
+      "category": "luxury",
+      "basePrice": 390,
+      "weight": 2,
+      "icon": "good:ivory",
+      "tier": "basic",
+      "dataStatus": "mock"
+    },
+    {
+      "id": "fur",
+      "name": "皮毛",
+      "category": "luxury",
+      "basePrice": 400,
+      "weight": 2,
+      "icon": "good:fur",
+      "tier": "basic",
+      "dataStatus": "mock"
+    }
+  ],
+  "cities": [
+    {
+      "id": "quanzhou",
+      "name": "泉州",
+      "type": "major_port",
+      "position": {
+        "x": 0.7,
+        "y": 0.35
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": ["tea", "porcelain", "silk"],
+      "demands": ["spice"],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "guangzhou",
+      "name": "廣州",
+      "type": "port",
+      "position": {
+        "x": 0.62,
+        "y": 0.43
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "hangzhou",
+      "name": "杭州",
+      "type": "port",
+      "position": {
+        "x": 0.71,
+        "y": 0.24
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "suzhou",
+      "name": "蘇州",
+      "type": "port",
+      "position": {
+        "x": 0.69,
+        "y": 0.2
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "kaifeng",
+      "name": "開封",
+      "type": "port",
+      "position": {
+        "x": 0.6,
+        "y": 0.18
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "yanjing",
+      "name": "燕京",
+      "type": "port",
+      "position": {
+        "x": 0.62,
+        "y": 0.08
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "dunhuang",
+      "name": "敦煌",
+      "type": "port",
+      "position": {
+        "x": 0.35,
+        "y": 0.15
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "chengdu",
+      "name": "成都",
+      "type": "port",
+      "position": {
+        "x": 0.48,
+        "y": 0.32
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "hakata",
+      "name": "博多",
+      "type": "port",
+      "position": {
+        "x": 0.88,
+        "y": 0.23
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "heiankyo",
+      "name": "平安京",
+      "type": "port",
+      "position": {
+        "x": 0.94,
+        "y": 0.2
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "gaegyeong",
+      "name": "開京",
+      "type": "port",
+      "position": {
+        "x": 0.8,
+        "y": 0.13
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "ryukyu",
+      "name": "琉球",
+      "type": "port",
+      "position": {
+        "x": 0.82,
+        "y": 0.43
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "champa",
+      "name": "占城",
+      "type": "port",
+      "position": {
+        "x": 0.6,
+        "y": 0.57
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "chenla",
+      "name": "真臘",
+      "type": "port",
+      "position": {
+        "x": 0.55,
+        "y": 0.63
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "srivijaya",
+      "name": "三佛齊",
+      "type": "port",
+      "position": {
+        "x": 0.46,
+        "y": 0.79
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "malacca",
+      "name": "馬六甲",
+      "type": "port",
+      "position": {
+        "x": 0.48,
+        "y": 0.7
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "east_india_port",
+      "name": "加爾各答區域港",
+      "type": "port",
+      "position": {
+        "x": 0.33,
+        "y": 0.54
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "cochin",
+      "name": "科欽",
+      "type": "port",
+      "position": {
+        "x": 0.22,
+        "y": 0.64
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "aden",
+      "name": "亞丁",
+      "type": "port",
+      "position": {
+        "x": 0.08,
+        "y": 0.58
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    },
+    {
+      "id": "hormuz",
+      "name": "霍爾木茲",
+      "type": "port",
+      "position": {
+        "x": 0.12,
+        "y": 0.38
+      },
+      "taxRate": 0.05,
+      "risk": 0.08,
+      "produces": [],
+      "demands": [],
+      "dataStatus": "mock"
+    }
+  ],
+  "market": [
+    {
+      "cityId": "quanzhou",
+      "goodId": "rice",
+      "buyPrice": 80,
+      "sellPrice": 80,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "wheat",
+      "buyPrice": 120,
+      "sellPrice": 120,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "salt",
+      "buyPrice": 130,
+      "sellPrice": 130,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "sugar",
+      "buyPrice": 140,
+      "sellPrice": 140,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "dried_fish",
+      "buyPrice": 150,
+      "sellPrice": 150,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "tea",
+      "buyPrice": 360,
+      "sellPrice": 360,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "herbs",
+      "buyPrice": 170,
+      "sellPrice": 170,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "ginseng",
+      "buyPrice": 180,
+      "sellPrice": 180,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "aromatic_wood",
+      "buyPrice": 190,
+      "sellPrice": 190,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "camphor",
+      "buyPrice": 200,
+      "sellPrice": 200,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "timber",
+      "buyPrice": 120,
+      "sellPrice": 120,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "cotton_cloth",
+      "buyPrice": 220,
+      "sellPrice": 220,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "cloth",
+      "buyPrice": 230,
+      "sellPrice": 230,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "silk",
+      "buyPrice": 850,
+      "sellPrice": 850,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "dye",
+      "buyPrice": 250,
+      "sellPrice": 250,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "pottery",
+      "buyPrice": 260,
+      "sellPrice": 260,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "porcelain",
+      "buyPrice": 520,
+      "sellPrice": 520,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "paper",
+      "buyPrice": 280,
+      "sellPrice": 280,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "books",
+      "buyPrice": 290,
+      "sellPrice": 290,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "lacquerware",
+      "buyPrice": 300,
+      "sellPrice": 300,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "ironware",
+      "buyPrice": 310,
+      "sellPrice": 310,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "copperware",
+      "buyPrice": 320,
+      "sellPrice": 320,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "silver",
+      "buyPrice": 330,
+      "sellPrice": 330,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "saddlery",
+      "buyPrice": 340,
+      "sellPrice": 340,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "blades",
+      "buyPrice": 350,
+      "sellPrice": 350,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "spice",
+      "buyPrice": 950,
+      "sellPrice": 950,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "frankincense",
+      "buyPrice": 370,
+      "sellPrice": 370,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "jewelry",
+      "buyPrice": 380,
+      "sellPrice": 380,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "ivory",
+      "buyPrice": 390,
+      "sellPrice": 390,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    },
+    {
+      "cityId": "quanzhou",
+      "goodId": "fur",
+      "buyPrice": 400,
+      "sellPrice": 400,
+      "stock": 20,
+      "quotedDay": 12,
+      "priceTrend": "flat",
+      "dataStatus": "mock"
+    }
+  ],
+  "knowledge": [
+    {
+      "cityId": "malacca",
+      "goodId": "tea",
+      "knownPrice": 500,
+      "observedDay": 10,
+      "history": [
+        {
+          "day": 8,
+          "price": 470
+        },
+        {
+          "day": 10,
+          "price": 500
+        }
+      ],
+      "source": "mock"
+    },
+    {
+      "cityId": "ryukyu",
+      "goodId": "porcelain",
+      "knownPrice": 680,
+      "observedDay": 9,
+      "history": [
+        {
+          "day": 7,
+          "price": 650
+        },
+        {
+          "day": 9,
+          "price": 680
+        }
+      ],
+      "source": "mock"
+    },
+    {
+      "cityId": "aden",
+      "goodId": "spice",
+      "knownPrice": null,
+      "observedDay": null,
+      "history": [],
+      "source": "mock"
+    }
+  ],
+  "routes": [
+    {
+      "id": "quanzhou_ryukyu",
+      "fromCityId": "quanzhou",
+      "toCityId": "ryukyu",
+      "mode": "sea",
+      "travelDays": 3,
+      "travelCost": 120,
+      "risk": 0.08,
+      "enabled": true,
+      "dataStatus": "mock"
+    },
+    {
+      "id": "quanzhou_malacca",
+      "fromCityId": "quanzhou",
+      "toCityId": "malacca",
+      "mode": "sea",
+      "travelDays": 12,
+      "travelCost": 480,
+      "risk": 0.18,
+      "enabled": true,
+      "dataStatus": "mock"
+    }
+  ],
+  "events": [
+    {
+      "id": "mock_rumor",
+      "title": "馬六甲茶葉需求傳聞",
+      "description": "固定展示傳聞，不保證目前價格。",
+      "type": "rumor",
+      "cityId": "malacca",
+      "goodId": "tea",
+      "observedDay": 10,
+      "displayOnly": true
+    },
+    {
+      "id": "mock_risk",
+      "title": "沿岸海盜傳聞",
+      "description": "Risk Event 展示，M0 不觸發戰鬥或扣款。",
+      "type": "risk",
+      "cityId": "ryukyu",
+      "observedDay": 11,
+      "displayOnly": true
+    }
+  ],
+  "cargo": [],
+  "routeState": {
+    "selectedRouteId": null,
+    "status": "idle"
+  }
+}

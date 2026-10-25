@@ -1,0 +1,38 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "status": "PASS",
+    "checks": "map zoom/drag, last CTA, numeric keyboard, Sheet/Modal focus trap and Escape, layout-only long text/large money"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "status": "PASS",
+    "checks": "map zoom/drag, last CTA, numeric keyboard, Sheet/Modal focus trap and Escape, layout-only long text/large money"
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "status": "PASS",
+    "checks": "map zoom/drag, last CTA, numeric keyboard, Sheet/Modal focus trap and Escape, layout-only long text/large money"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "status": "PASS",
+    "checks": "map zoom/drag, last CTA, numeric keyboard, Sheet/Modal focus trap and Escape, layout-only long text/large money"
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "status": "PASS",
+    "checks": "map zoom/drag, last CTA, numeric keyboard, Sheet/Modal focus trap and Escape, layout-only long text/large money"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "status": "PASS",
+    "checks": "map zoom/drag, last CTA, numeric keyboard, Sheet/Modal focus trap and Escape, layout-only long text/large money"
+  }
+]
