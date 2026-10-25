@@ -1,0 +1,53 @@
+{
+  "baseUrl": "https://conyku0508.github.io/tianxia-trade-m0/",
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "status": "PASS",
+      "checks": "6 pages, images decoded, real Vue controls/assets, buy2 and synchronized Cargo, v2 knowledge and exact observation history, no overflow/pageerror/failed assets",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "PASS",
+      "checks": "6 pages, images decoded, real Vue controls/assets, buy2 and synchronized Cargo, v2 knowledge and exact observation history, no overflow/pageerror/failed assets",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "status": "PASS",
+      "checks": "6 pages, images decoded, real Vue controls/assets, buy2 and synchronized Cargo, v2 knowledge and exact observation history, no overflow/pageerror/failed assets",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "status": "PASS",
+      "checks": "6 pages, images decoded, real Vue controls/assets, buy2 and synchronized Cargo, v2 knowledge and exact observation history, no overflow/pageerror/failed assets",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "status": "PASS",
+      "checks": "6 pages, images decoded, real Vue controls/assets, buy2 and synchronized Cargo, v2 knowledge and exact observation history, no overflow/pageerror/failed assets",
+      "errors": [],
+      "badResponses": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "PASS",
+      "checks": "6 pages, images decoded, real Vue controls/assets, buy2 and synchronized Cargo, v2 knowledge and exact observation history, no overflow/pageerror/failed assets",
+      "errors": [],
+      "badResponses": []
+    }
+  ]
+}

@@ -93,3 +93,12 @@
 ### 仍有限制
 
 實體手機／Safari／軟鍵盤尚未重新驗收；以上為Chrome headless viewport測試。插畫地理及建築為示意，不保證史實。沒有新航行、事件、經濟平衡或持久化。
+
+
+### 正式站驗收結果
+
+GitHub Actions run [40224953564](https://github.com/conyku0508/tianxia-trade-m0/actions/runs/40224953564) 為 success；執行用美術版本 commit `287dbf2aa561c961dc91e221ba58c6b14f5577aa`。
+
+正式站 https://conyku0508.github.io/tianxia-trade-m0/?release=art-v1-20261026 已完成六尺寸 `scripts/art-check.mjs`：360×800、390×844、430×932、768×1024、1024×768、1440×900 全部 PASS。每尺寸走六頁、實際買茶2、檢查現金4,244／成本756／估值720／盈虧−36與已知行情觀察點。沒有 pageerror、失敗資源或水平溢出，所有實際img已解碼。原始結果及截圖在 `artifacts/art-release/live/`。
+
+這是部署後 Chrome 實測，沒有把前一輪手機能開啟的回覆當作新版 Safari／實體手機驗收。正式裝置仍請使用者試玩。

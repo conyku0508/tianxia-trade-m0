@@ -89,3 +89,5 @@ RWD：小於 768px 為單欄與底部 Sheet；768–1199px 重排為雙區塊與
 - 圖片為示意美術，不作正式地理／建築考據；20城座標、30商品與所有交易／路線規則維持既有 fixture。沒有新增航行、存檔或投資功能。
 
 美術六尺寸驗收：`node scripts/art-check.mjs`。可設定 `BASE_URL` 測正式站、`ARTIFACT_DIR` 指定輸出；結果位於 `artifacts/art-release/`。原始 UI 邊界與交易流程腳本也支援這兩個環境變數。
+
+美術版已上線：[手機試玩](https://conyku0508.github.io/tianxia-trade-m0/?release=art-v1-20261026)。部署後六尺寸實測通過，結果 `artifacts/art-release/live/art-results.json`。
