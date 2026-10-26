@@ -157,6 +157,7 @@ export interface TradeSnapshot {
   cargo: CargoItem[];
   market: MarketItem[];
   revision: number; // monotonic across reset as well, rejects stale previews
+  inTransit?: boolean;
 }
 export interface TradeRequest {
   cityId: Id;
@@ -176,8 +177,11 @@ export type TradeError =
   | "OVER_CAPACITY"
   | "INSUFFICIENT_CARGO"
   | "STALE_PREVIEW"
-  | "BUSY";
+  | "BUSY"
+  | "IN_TRANSIT";
 export interface TradePreview {
+  costBasis: number;
+  realizedProfit: number | null;
   request: TradeRequest;
   unitPrice: number;
   subtotal: number;
@@ -205,7 +209,11 @@ export interface TradeServicePort {
   cargoSummary(): CargoSummary;
 }
 export type RouteError =
-  "NO_ROUTE" | "WRONG_ORIGIN" | "OUT_OF_RANGE" | "INSUFFICIENT_FUNDS";
+  | "NO_ROUTE"
+  | "WRONG_ORIGIN"
+  | "OUT_OF_RANGE"
+  | "INSUFFICIENT_FUNDS"
+  | "IN_TRANSIT";
 export interface RoutePreview {
   route: Route;
   canPrepare: boolean;

@@ -25,6 +25,7 @@ const errors: Record<TradeError, string> = {
   INSUFFICIENT_CARGO: "持有數量不足",
   STALE_PREVIEW: "摘要已過期，請重新取得摘要並確認",
   BUSY: "交易處理中",
+  IN_TRANSIT: "航行中無法交易，請先抵達港口",
 };
 export class TradeService {
   private busy = false;
@@ -71,6 +72,7 @@ export class TradeService {
   }
   preview(r: TradeRequest): Result<TradePreview, TradeError> {
     const s = this.port.snapshot();
+    if (s.inTransit) return this.fail("IN_TRANSIT");
     if (r.expectedRevision !== s.revision) return this.fail("STALE_PREVIEW");
     if (r.mode !== "buy" && r.mode !== "sell") return this.fail("INVALID_MODE");
     if (
@@ -127,6 +129,10 @@ export class TradeService {
     return {
       ok: true,
       value: {
+        costBasis: buy ? 0 : (old?.averageCost ?? 0) * r.quantity,
+        realizedProfit: buy
+          ? null
+          : cashDelta - (old?.averageCost ?? 0) * r.quantity,
         request: { ...r },
         unitPrice,
         subtotal,
@@ -159,7 +165,7 @@ export class TradeService {
   }
   maxQuantity(cityId: string, goodId: string, mode: "buy" | "sell") {
     const s = this.port.snapshot();
-    if (cityId !== s.game.currentCityId) return 0;
+    if (s.inTransit || cityId !== s.game.currentCityId) return 0;
     const q = s.market.find((q) => q.cityId === cityId && q.goodId === goodId);
     const g = this.goods.find((g) => g.id === goodId);
     if (!q || !g) return 0;

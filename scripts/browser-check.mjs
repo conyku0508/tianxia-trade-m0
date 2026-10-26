@@ -131,7 +131,7 @@ try {
     await page.getByRole("button", { name: "確認買入", exact: true }).click();
     assert.match(await page.getByTestId("money").innerText(), /86/);
     await page.reload();
-    assert.match(await page.getByTestId("money").innerText(), /5,000/);
+    assert.match(await page.getByTestId("money").innerText(), /86/);
     assert.deepEqual(errors, []);
     results.push({
       width,

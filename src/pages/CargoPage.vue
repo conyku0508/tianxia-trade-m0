@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useVoyageStore } from "../stores";
 import { computed } from "vue";
 import { useServices } from "../services";
 import { money } from "../data/presentation";
@@ -6,7 +7,8 @@ import GamePanel from "../components/ui/GamePanel.vue";
 import GameButton from "../components/ui/GameButton.vue";
 import ArtIcon from "../components/ui/ArtIcon.vue";
 import SceneHero from "../components/ui/SceneHero.vue";
-const { trade } = useServices(),
+const transit = useVoyageStore(),
+  { trade } = useServices(),
   summary = computed(() => trade.cargoSummary()),
   rows = computed(() => trade.cargoRows());
 </script>
@@ -28,14 +30,18 @@ const { trade } = useServices(),
       <dl class="summary">
         <dt>總成本（含買入稅）</dt>
         <dd>{{ money(summary.totalCost) }}</dd>
-        <dt>當地稅前估值</dt>
+        <dt>{{ transit.active ? "出發港參考估值" : "當地稅前估值" }}</dt>
         <dd>{{ money(summary.localValue) }}</dd>
         <dt>未實現盈虧</dt>
         <dd :class="{ negative: (summary.unrealizedProfit ?? 0) < 0 }">
           {{ money(summary.unrealizedProfit) }}
         </dd>
       </dl>
-      <small>估值未扣除未來賣出稅；並非已實現收益。</small></GamePanel
+      <small>{{
+        transit.active
+          ? "航行中參考出發港報價，無法在海上成交。"
+          : "估值未扣除未來賣出稅；並非已實現收益。"
+      }}</small></GamePanel
     >
     <div>
       <GamePanel v-if="!rows.length" class="empty"

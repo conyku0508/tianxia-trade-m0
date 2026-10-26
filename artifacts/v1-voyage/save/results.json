@@ -1,0 +1,17 @@
+{
+  "base": "http://127.0.0.1:5174/",
+  "results": [
+    {
+      "case": "quota failure preserves live state and allows complete export",
+      "status": "PASS"
+    },
+    {
+      "case": "second tab detects newer save and does not overwrite it",
+      "status": "PASS"
+    },
+    {
+      "case": "corrupt primary recovers last-good backup at actual browser origin",
+      "status": "PASS"
+    }
+  ]
+}

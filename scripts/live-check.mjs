@@ -86,14 +86,14 @@ try {
       fullPage: true,
     });
     await page.reload({ waitUntil: "networkidle" });
-    assert.match(await page.getByTestId("money").innerText(), /5,000/);
+    assert.match(await page.getByTestId("money").innerText(), /4,244/);
     results.push({
       width,
       height,
       status: "PASS",
       http: response.status(),
       gridColumns,
-      flow: "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload5000",
+      flow: "Map→City→Market→Buy2Tea→Cargo→Intelligence→Route→Prepared; money4244; reload4244",
       errors,
       badResponses,
     });

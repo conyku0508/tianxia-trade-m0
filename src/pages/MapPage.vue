@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
-import { useCityStore, useGameStore } from "../stores";
+import {
+  useCityStore,
+  useGameStore,
+  useVoyageStore,
+  useKnowledgeStore,
+} from "../stores";
 import { goods } from "../data/fixture";
 import { useServices } from "../services";
 import { percent } from "../data/presentation";
@@ -11,6 +16,8 @@ import ArtIcon from "../components/ui/ArtIcon.vue";
 import { art } from "../data/assets";
 const cities = useCityStore(),
   game = useGameStore(),
+  transit = useVoyageStore(),
+  knowledge = useKnowledgeStore(),
   router = useRouter(),
   { route } = useServices(),
   selected = ref<string | null>(null),
@@ -39,8 +46,29 @@ function move(e: PointerEvent) {
   scroller.value!.scrollTop = drag.top - (e.clientY - drag.y);
 }
 onMounted(() => {
-  scroller.value!.scrollLeft = 510;
-  scroller.value!.scrollTop = 60;
+  const pos = cities.byId[game.currentCityId]!.position;
+  scroller.value!.scrollLeft = pos.x * 1000 - scroller.value!.clientWidth / 2;
+  scroller.value!.scrollTop = pos.y * 740 - scroller.value!.clientHeight / 2;
+});
+const movingShip = computed(() => {
+  const v = transit.active;
+  if (!v) return null;
+  const a = cities.byId[v.fromCityId]!.position,
+    b = cities.byId[v.toCityId]!.position,
+    t = v.elapsedDays / v.travelDays;
+  return {
+    left: (a.x + (b.x - a.x) * t) * 100 + "%",
+    top: (a.y + (b.y - a.y) * t) * 100 + "%",
+  };
+});
+const observedDay = computed(() => {
+  if (!city.value) return null;
+  if (city.value.id === game.currentCityId && !transit.active)
+    return game.currentDay;
+  const days = knowledge.records
+    .filter((k) => k.cityId === city.value!.id && k.observedDay !== null)
+    .map((k) => k.observedDay!);
+  return days.length ? Math.max(...days) : null;
 });
 const names = (ids: string[]) =>
   ids.map((id) => goods.find((g) => g.id === id)?.name).join("、") ||
@@ -100,12 +128,19 @@ const names = (ids: string[]) =>
               >北</small
             ></span
           ><span class="sea-label">南 海</span
+          ><RouterLink
+            v-if="movingShip"
+            to="/sailing"
+            class="moving-ship"
+            :style="movingShip"
+            aria-label="查看航行中的商隊"
+            >⛵</RouterLink
           ><button
             v-for="c in cities.items"
             :key="c.id"
             class="city-marker"
             :class="{
-              current: c.id === game.currentCityId,
+              current: c.id === game.currentCityId && !transit.active,
               selected: c.id === selected,
             }"
             :style="{
@@ -114,13 +149,17 @@ const names = (ids: string[]) =>
             }"
             :aria-label="'選擇' + c.name"
             :aria-pressed="selected === c.id"
-            :aria-current="c.id === game.currentCityId ? 'location' : undefined"
+            :aria-current="
+              c.id === game.currentCityId && !transit.active
+                ? 'location'
+                : undefined
+            "
             @click="selected = c.id"
           >
             <span class="city-pin" aria-hidden="true" />
             <span class="city-label"
               ><span
-                v-if="c.id === game.currentCityId"
+                v-if="c.id === game.currentCityId && !transit.active"
                 class="city-current-flag"
                 aria-hidden="true"
                 >⚑ </span
@@ -150,10 +189,12 @@ const names = (ids: string[]) =>
       v-if="city.id === game.currentCityId"
       :src="art.market"
       class="city-scene"
-      alt="泉州港市景"
+      alt="共用港口示意場景"
     /><span class="pill">{{
       city.id === game.currentCityId
-        ? "所在港口 · 大型海港"
+        ? transit.active
+          ? "出發港 · 商隊航行中"
+          : "所在港口 · 模擬摘要"
         : "示意港口 · 模擬摘要"
     }}</span>
     <h3 class="info-space">海路交會，百貨雲集</h3>
@@ -174,22 +215,22 @@ const names = (ids: string[]) =>
       <dt>情報時間</dt>
       <dd>
         {{
-          city.id === game.currentCityId
-            ? "當地 · 第" + game.currentDay + "天"
-            : "尚無港口觀察"
+          observedDay === null ? "尚無港口觀察" : "第" + observedDay + "天觀察"
         }}
       </dd>
     </dl>
     <p class="muted">城市發展於 V1.5 開放；招募於 V2 開放。</p>
     <div class="actions">
       <GameButton
-        v-if="city.id === game.currentCityId"
+        v-if="city.id === game.currentCityId && !transit.active"
         @click="router.push('/market')"
         >進入市場</GameButton
       ><GameButton
-        v-else-if="available"
+        v-else-if="available && !transit.active"
         @click="router.push({ path: '/route', query: { id: available.id } })"
         >查看航線</GameButton
+      ><GameButton v-else-if="transit.active" @click="$router.push('/sailing')"
+        >繼續航行</GameButton
       ><GameButton v-else disabled>暫無原型航線</GameButton>
     </div></Overlay
   >

@@ -1,4 +1,4 @@
-name: Deploy M0 to GitHub Pages
+name: Deploy trade prototype to GitHub Pages
 on:
   push:
     branches: [main]

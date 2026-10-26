@@ -1,7 +1,11 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
+import { createPinia, setActivePinia } from "pinia";
 import App from "./App.vue";
 import router from "./router/routes";
 import "./styles/tokens.css";
 import "./styles/art.css";
-createApp(App).use(createPinia()).use(router).mount("#app");
+import { initializePersistence } from "./services/persistence";
+const pinia = createPinia();
+setActivePinia(pinia);
+initializePersistence(pinia);
+createApp(App).use(pinia).use(router).mount("#app");

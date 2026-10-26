@@ -94,7 +94,6 @@
 
 實體手機／Safari／軟鍵盤尚未重新驗收；以上為Chrome headless viewport測試。插畫地理及建築為示意，不保證史實。沒有新航行、事件、經濟平衡或持久化。
 
-
 ### 正式站驗收結果
 
 GitHub Actions run [40224953564](https://github.com/conyku0508/tianxia-trade-m0/actions/runs/40224953564) 為 success；執行用美術版本 commit `287dbf2aa561c961dc91e221ba58c6b14f5577aa`。
@@ -103,7 +102,6 @@ GitHub Actions run [40224953564](https://github.com/conyku0508/tianxia-trade-m0/
 
 這是部署後 Chrome 實測，沒有把前一輪手機能開啟的回覆當作新版 Safari／實體手機驗收。正式裝置仍請使用者試玩。
 
-
 ## 手機城市標記縮小｜2026-10-26
 
 UI限定修改 `MapPage.vue` 與 `art.css`，手機寬度<768px時改為小港口圓點＋21px高窄版名稱；泉州採紅金色。透明按鈕觸控範圍44×44px，並使用反向縮放保持視覺與觸控區固定。平板／桌面維持原樣。城市座標、fixture與services不變。
@@ -111,3 +109,14 @@ UI限定修改 `MapPage.vue` 與 `art.css`，手機寬度<768px時改為小港�
 `npm run build` 通過；`scripts/port-check.mjs` 六尺寸通過，20城標記存在，可在0.75／1／1.75倍點泉州，外地與長名稱摘要可用，Esc／關閉正常，市場30商品、現金5,000、無水平溢出或pageerror。三個手機尺寸量測觸控區均約44×44px，label高21px。結果與截圖在 `artifacts/compact-ports/`。實體手機/Safari仍待使用者驗收。
 
 正式站城市標記版本 `930ab68f2f49b3b0fc5803537dd2468af5e439e0` 的 Actions run40225519466建置與部署成功；正式HTTPS網址六尺寸port-check全數PASS，結果在 `artifacts/compact-ports/live/results.json`。手機三尺寸於0.75／1／1.75倍的觸控區實測約44×44px，非僅靜態CSS檢查。
+
+## V1第一階段：商隊往返／本機續玩
+
+本章為目前版本；前文M0「memory-only刷新重設」是歷史紀錄，新版已由自動存檔取代。程式v0.2.0，詳細契約見M1_SPEC.md、操作指南TEST_GUIDE.md及遊戲/help。
+
+- 本機46項測試通過（原19+新增27），包含完整茶10／木材10往返、day18／cash5945／net945、重複出航與日期、海上交易拒絕、費用／航程／起點重新驗證、抵達情報、馬六甲回程、重設、存檔版本／數值／帳務一致性、配額／安全錯誤、回讀不符、備份復原與分頁衝突。
+- 六尺寸Chrome實際往返全部PASS：360×800、390×844、430×932、768×1024、1024×768、1440×900。測cancel/雙點出航/雙點一天/海上市場阻擋/第13天reload續航/到港價與觀察日/完整買賣/匯出/檔案與文字匯入/取消還原/損毀拒絕/重設/86不足120旅費/手機指南。沒有pageerror或4xx/5xx資源。結果 `artifacts/v1-voyage/results.json`。
+- 真實瀏覽器origin儲存檢查3項PASS：注入QuotaExceededError後記憶體狀態保留且可匯出；兩分頁偵測新保存、不覆寫；損毀主檔可載入上一有效備份。結果 `artifacts/v1-voyage/save/results.json`。
+- 手機390及桌面1440航行／到港／累計帳截圖已保存並檢視，沿用既有美術與底部五入口。
+- 測試曾發現Pinia Proxy不能structuredClone，已改逐層複製情報歷史，完整測試後通過。
+- 型別與production build通過。動態價格、隨機風險、離線、投資、多船、帳號與跨裝置同步未實作或驗證。Chrome模擬尺寸不等於真機Safari、觸控及軟鍵盤驗收，仍須使用者裝置測試。

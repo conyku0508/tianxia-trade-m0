@@ -5,6 +5,8 @@ import CargoPage from "../pages/CargoPage.vue";
 import IntelligencePage from "../pages/IntelligencePage.vue";
 import RoutePage from "../pages/RoutePage.vue";
 import MenuPage from "../pages/MenuPage.vue";
+import SailingPage from "../pages/SailingPage.vue";
+import TestGuidePage from "../pages/TestGuidePage.vue";
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -15,6 +17,8 @@ export default createRouter({
     { path: "/intelligence", component: IntelligencePage },
     { path: "/route", component: RoutePage },
     { path: "/menu", component: MenuPage },
+    { path: "/sailing", component: SailingPage },
+    { path: "/help", component: TestGuidePage },
   ],
   scrollBehavior: () => ({ top: 0 }),
 });

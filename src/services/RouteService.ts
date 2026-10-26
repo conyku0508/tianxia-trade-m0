@@ -10,7 +10,11 @@ import type {
 export class RouteService {
   constructor(
     private routes: Route[],
-    private state: () => { game: GameState; player: Player },
+    private state: () => {
+      game: GameState;
+      player: Player;
+      inTransit?: boolean;
+    },
     private write: (s: RouteState) => void,
   ) {}
   listFrom(cityId: string) {
@@ -20,8 +24,9 @@ export class RouteService {
     const r = this.routes.find((r) => r.id === id && r.enabled);
     if (!r) return { ok: false, error: "NO_ROUTE", message: "暫無原型航線" };
     const s = this.state(),
-      reason =
-        r.fromCityId !== s.game.currentCityId
+      reason = s.inTransit
+        ? "IN_TRANSIT"
+        : r.fromCityId !== s.game.currentCityId
           ? "WRONG_ORIGIN"
           : r.travelDays > s.player.transport.rangeDays
             ? "OUT_OF_RANGE"
@@ -38,17 +43,20 @@ export class RouteService {
         ok: false,
         error: p.value.reason!,
         message:
-          p.value.reason === "OUT_OF_RANGE"
-            ? "超出商船航程"
-            : p.value.reason === "WRONG_ORIGIN"
-              ? "不在路線起點"
-              : "現金不足旅費",
+          p.value.reason === "IN_TRANSIT"
+            ? "航行中無法準備其他航線"
+            : p.value.reason === "OUT_OF_RANGE"
+              ? "超出商船航程"
+              : p.value.reason === "WRONG_ORIGIN"
+                ? "不在路線起點"
+                : "現金不足旅費",
       };
     const state: RouteState = { selectedRouteId: id, status: "prepared" };
     this.write(state);
     return { ok: true, value: state };
   }
   cancel() {
+    if (this.state().inTransit) return;
     this.write({ selectedRouteId: null, status: "idle" });
   }
 }
