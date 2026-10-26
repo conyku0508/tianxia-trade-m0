@@ -1,0 +1,631 @@
+{
+  "version": "0.2.0",
+  "sourceCommit": "4090be7156e7b5b776b9ce4d75aa62dc655d7077",
+  "created": "2026-10-26",
+  "packages": {
+    "tianxia-trade-v0.2.0-web.zip": {
+      "sha256": "4cef4fe62ee175b34a5b3c9836009574816ac2379005c9b89fb86e1991dfc01a",
+      "bytes": 3072150,
+      "files": [
+        {
+          "path": "assets/cargo-hold-C9PFPHxa.webp",
+          "bytes": 484332,
+          "sha256": "a3b72360dcc28d2e73c1dbd1324946d303c037f0557a6de273d7ab79151032fd"
+        },
+        {
+          "path": "assets/goods-atlas-CKX8lEsS.webp",
+          "bytes": 444108,
+          "sha256": "63c9e6850f3bfd925f9a39469a34eb714f99e8c4bc1f1617766d9edbb9ebdd07"
+        },
+        {
+          "path": "assets/index-CbWHRbtQ.js",
+          "bytes": 180500,
+          "sha256": "07ae7a47c7431cc6e98617539fee7d858776647a15f9c76361c49faabcba0798"
+        },
+        {
+          "path": "assets/index-Cio1jkVY.css",
+          "bytes": 33310,
+          "sha256": "58ea33907a170c17159de3ebc81d7c52d4b7cc2c35569d4510e5b4b1426b4c6e"
+        },
+        {
+          "path": "assets/intelligence-desk-BWVslza9.webp",
+          "bytes": 450738,
+          "sha256": "612f305419d8646174f668a6c335a3a7069f7a0bce2ee987a3218871107db22e"
+        },
+        {
+          "path": "assets/navigation-atlas-Cs30QKZZ.webp",
+          "bytes": 353862,
+          "sha256": "7f0582646497d9bfd6a81e8dc773118da6565a7c7cda30c9837d7e17b0992fb2"
+        },
+        {
+          "path": "assets/quanzhou-market-CiroIoWE.webp",
+          "bytes": 572180,
+          "sha256": "ee84df33a7f4906c7f2c32126757e3f7c4d6b80a636821715f9a321f89be0e93"
+        },
+        {
+          "path": "assets/world-map-iVn_bRar.webp",
+          "bytes": 692054,
+          "sha256": "2fba67f788f860d8fb6beb794e13cccbf0b2453d8f47bf5adecc0a6323042d3d"
+        },
+        {
+          "path": "index.html",
+          "bytes": 773,
+          "sha256": "417cb1a531f15bc7bc8dec396419217155a1f763bcedd6666b65d40ddc29f115"
+        }
+      ]
+    },
+    "tianxia-trade-v0.2.0-source.zip": {
+      "sha256": "5810ff98806bae3ab97f0cab5356d5360a805cc24676ebc1af9fd4bb19403dea",
+      "bytes": 3108199,
+      "files": [
+        {
+          "path": ".github/workflows/pages.yml",
+          "bytes": 835,
+          "sha256": "ba389295daaef36420189fcc6d0acc657d482dc2e38426b8d12789ee56c3591b"
+        },
+        {
+          "path": ".gitignore",
+          "bytes": 47,
+          "sha256": "2ac742580578fdd25ebbd273afee8be9dc620b0f9943c97a8e7ab0abcc59898f"
+        },
+        {
+          "path": "M1_SPEC.md",
+          "bytes": 3590,
+          "sha256": "ec0f386ca7380ac045acd985b435277418178421e77753071b265b383ee96ac8"
+        },
+        {
+          "path": "README.md",
+          "bytes": 5858,
+          "sha256": "dfb118bbcf63d9f33b9b3d4e941b68b283a52eb6fb7d8f3fd7e39a86fcf6987d"
+        },
+        {
+          "path": "TEST_GUIDE.md",
+          "bytes": 4139,
+          "sha256": "734ae47d63fe63328a566903b9f9dba2519eed2d14c7448dcbbb9d319cb050f9"
+        },
+        {
+          "path": "VALIDATION.md",
+          "bytes": 13552,
+          "sha256": "16afcfa9d43d1821459af0e1d934e02f5786391cb4f7ba1a23b3237f255d6c71"
+        },
+        {
+          "path": "index.html",
+          "bytes": 672,
+          "sha256": "97f209cbe5cb7972898123ae3855f9007dde5f1732cc9c1eb996aae7ea785017"
+        },
+        {
+          "path": "package-lock.json",
+          "bytes": 93034,
+          "sha256": "9aae5a839ae8454c03bf970234f862630e8efc499734c8b94c42572bbfb32851"
+        },
+        {
+          "path": "package.json",
+          "bytes": 654,
+          "sha256": "1179696af5d5685d70e67b2c092292a17e294447fa8b10d7b62288784c46ef3e"
+        },
+        {
+          "path": "scripts/art-check.mjs",
+          "bytes": 5392,
+          "sha256": "655c7440c7e06afed383d1658ee4ac8de435dc8953a91578eab3a7472bf4bef1"
+        },
+        {
+          "path": "scripts/browser-check.mjs",
+          "bytes": 6083,
+          "sha256": "620678c175aa8ed32c73e94ed0baee6ce81ff754d1a18ea0b160fe7bd6cc80b7"
+        },
+        {
+          "path": "scripts/browser-edge-check.mjs",
+          "bytes": 4377,
+          "sha256": "9ef31694d5af8dd04507b7fd62aa4dd33311f608dfe0aab55a5ed4a5b1d4948c"
+        },
+        {
+          "path": "scripts/live-check.mjs",
+          "bytes": 3815,
+          "sha256": "6d80edbc5fb0dcbc1e6b7ef82248712a4ad127a71fd5f83a5254ef5da78df1f2"
+        },
+        {
+          "path": "scripts/port-check.mjs",
+          "bytes": 3816,
+          "sha256": "3e075633314a5642daed63fc3808c0c3f3812493507d0eb41688f4aee4b3a3f8"
+        },
+        {
+          "path": "scripts/save-browser-check.mjs",
+          "bytes": 3567,
+          "sha256": "43452d6a5cb0dc2bd074451348353a9f23e7662dfe8fe93b332116bfc39c912b"
+        },
+        {
+          "path": "scripts/voyage-check.mjs",
+          "bytes": 9977,
+          "sha256": "9de8943365e071c224010ceb1118dfe8a06facd7a2bf48c6ec21190e716415f5"
+        },
+        {
+          "path": "src/App.vue",
+          "bytes": 2917,
+          "sha256": "813c5d868ab0754a8f83998eb6c1e321e71610daed73782697a7c695d86ad49d"
+        },
+        {
+          "path": "src/assets/art/cargo-hold.webp",
+          "bytes": 484332,
+          "sha256": "a3b72360dcc28d2e73c1dbd1324946d303c037f0557a6de273d7ab79151032fd"
+        },
+        {
+          "path": "src/assets/art/goods-atlas.webp",
+          "bytes": 444108,
+          "sha256": "63c9e6850f3bfd925f9a39469a34eb714f99e8c4bc1f1617766d9edbb9ebdd07"
+        },
+        {
+          "path": "src/assets/art/intelligence-desk.webp",
+          "bytes": 450738,
+          "sha256": "612f305419d8646174f668a6c335a3a7069f7a0bce2ee987a3218871107db22e"
+        },
+        {
+          "path": "src/assets/art/navigation-atlas.webp",
+          "bytes": 353862,
+          "sha256": "7f0582646497d9bfd6a81e8dc773118da6565a7c7cda30c9837d7e17b0992fb2"
+        },
+        {
+          "path": "src/assets/art/quanzhou-market.webp",
+          "bytes": 572180,
+          "sha256": "ee84df33a7f4906c7f2c32126757e3f7c4d6b80a636821715f9a321f89be0e93"
+        },
+        {
+          "path": "src/assets/art/world-map.webp",
+          "bytes": 692054,
+          "sha256": "2fba67f788f860d8fb6beb794e13cccbf0b2453d8f47bf5adecc0a6323042d3d"
+        },
+        {
+          "path": "src/components/ui/ArtIcon.vue",
+          "bytes": 1033,
+          "sha256": "a8d76e95bd7a626b657ba0dd776299ba5a5a34c94952909dde01a01d7515008c"
+        },
+        {
+          "path": "src/components/ui/GameButton.vue",
+          "bytes": 309,
+          "sha256": "60aaf454e2b0c9e42a770bd88f96a17fdfeaa705ae72b90f80441ab3e6619a58"
+        },
+        {
+          "path": "src/components/ui/GamePanel.vue",
+          "bytes": 67,
+          "sha256": "aa83961abb2e9ab56dee35cb93b88d07585a4d0f1e407c86a272eff611078562"
+        },
+        {
+          "path": "src/components/ui/GoodsRow.vue",
+          "bytes": 1448,
+          "sha256": "87012c57c1a8ee7ea1fff3bf467fe352b261ea12e396fab58caf72a89333b637"
+        },
+        {
+          "path": "src/components/ui/Overlay.vue",
+          "bytes": 1734,
+          "sha256": "15eb0b867727aa269806150c43aed58aa0f9256591d80fc1d12d9c7ceedb6a5d"
+        },
+        {
+          "path": "src/components/ui/PriceTrend.vue",
+          "bytes": 2009,
+          "sha256": "be8268319f1ca3ecf9ef296ded312ffc63753039e833188edc547a2df64bb4df"
+        },
+        {
+          "path": "src/components/ui/SceneHero.vue",
+          "bytes": 552,
+          "sha256": "11d88a19a3a80992c235ddb104a5937e8d6944b2be748687130655477e7c9c90"
+        },
+        {
+          "path": "src/components/ui/TradeControl.vue",
+          "bytes": 4115,
+          "sha256": "fa21d2c440ccfb4d3d74e454052c7750aa0a48c953cc73c863f95920238fdb5a"
+        },
+        {
+          "path": "src/contracts/game.ts",
+          "bytes": 6745,
+          "sha256": "e06c10d16430c7b09087ef66eeccd0a0c21f910a29b3e4e040f75b88c918a349"
+        },
+        {
+          "path": "src/contracts/voyage.ts",
+          "bytes": 1247,
+          "sha256": "22dbf772601afe33a0dc2fc3441329feb3c00ea592d8946a1775a06a3aea780d"
+        },
+        {
+          "path": "src/data/assets.ts",
+          "bytes": 942,
+          "sha256": "ee2692c34c1de2f335786a20d0a441c356b0ce5d2de9ebb3b525b9ae848cc7ae"
+        },
+        {
+          "path": "src/data/fixture.ts",
+          "bytes": 348,
+          "sha256": "a8c86360e9e5cba1c99a9d0d5e8474fbd69ce439c0c95fe0120e043c60decbed"
+        },
+        {
+          "path": "src/data/journeyConfig.ts",
+          "bytes": 1275,
+          "sha256": "64b152074058ba4f5e1f04e1abfb7cb8ce748eed7740e7c9cb1f577b2ddbb86f"
+        },
+        {
+          "path": "src/data/mock-fixture.json",
+          "bytes": 20253,
+          "sha256": "4f2fa9a552a0434e3d7f19ec882b620fc5cb101f51f141ee1767b61e006df658"
+        },
+        {
+          "path": "src/data/presentation.ts",
+          "bytes": 538,
+          "sha256": "31aa16891a83537ead7b74a8e68fe60c88499fc1dbf6c274ba6db6845e636512"
+        },
+        {
+          "path": "src/main.ts",
+          "bytes": 409,
+          "sha256": "70c2e2b476ce571818bca186c750bd28845992a92fe95f92bf27ee57d846a722"
+        },
+        {
+          "path": "src/pages/CargoPage.vue",
+          "bytes": 3201,
+          "sha256": "1e83b40ff0e26b87b870796b977b4453ec7070a68b1d40ed60ab5d0a4945735e"
+        },
+        {
+          "path": "src/pages/IntelligencePage.vue",
+          "bytes": 5100,
+          "sha256": "6c610d8fd9d59d384867164fc2cf51b6169584e439cbe8fbe37dc5a219f1b4dd"
+        },
+        {
+          "path": "src/pages/MapPage.vue",
+          "bytes": 8109,
+          "sha256": "b4f71cf1809f6700664c71200e902a32f28d489b2d408fe4a248427c043f23ba"
+        },
+        {
+          "path": "src/pages/MarketPage.vue",
+          "bytes": 3651,
+          "sha256": "4e5cd8aa05f082a01d4d50dd7617578103d6b280aea63076125d4e48859fe522"
+        },
+        {
+          "path": "src/pages/MenuPage.vue",
+          "bytes": 5697,
+          "sha256": "d4e725f611f85d3d545a63b8a1f063e9b794b3b3d0e6fc8b040cb99dbeb35d6a"
+        },
+        {
+          "path": "src/pages/RoutePage.vue",
+          "bytes": 7071,
+          "sha256": "1dec90b901ed556d7f3bd8e943bd765ed97907badd3cc2e8cb43f3f6ea5f0b3d"
+        },
+        {
+          "path": "src/pages/SailingPage.vue",
+          "bytes": 5338,
+          "sha256": "96a3ab50de45bb01eeba3383011f97137d52321105ccec9483d8d7fd72489f8f"
+        },
+        {
+          "path": "src/pages/TestGuidePage.vue",
+          "bytes": 3504,
+          "sha256": "22c097feb097618b6a295d3d884055e64b4eb5572e8113f48a5a83b01055c4b1"
+        },
+        {
+          "path": "src/router/routes.ts",
+          "bytes": 1017,
+          "sha256": "654398d5344c12365b5f4aff92ed4d336e3d8220e57e5f43aa2f05725d2875fd"
+        },
+        {
+          "path": "src/services/MarketService.ts",
+          "bytes": 334,
+          "sha256": "b6fca56055c6068e87e723cf27508ebb65fdb463f2b96cc9787409097dc8183f"
+        },
+        {
+          "path": "src/services/RouteService.ts",
+          "bytes": 1892,
+          "sha256": "f7d73d9c96f8cf82fbd1a9f5eb63ecd44ff7be1e5a61bff0e507c359d3a81339"
+        },
+        {
+          "path": "src/services/SaveService.ts",
+          "bytes": 12082,
+          "sha256": "9f256aa5a84a3fcd8c269de2ec2136cb8832e8946499928b249893b6ff0cf716"
+        },
+        {
+          "path": "src/services/TradeService.ts",
+          "bytes": 6474,
+          "sha256": "e8bb81cba3821bf4ff392caa6dc3f00da2762c28cc4b5ad1c37c7caf4652ca5a"
+        },
+        {
+          "path": "src/services/VoyageService.ts",
+          "bytes": 4646,
+          "sha256": "e5dac9e38aa0ae34fa8281ded2dcf324e604e704dcf92bc6b3c72caaee29958c"
+        },
+        {
+          "path": "src/services/index.ts",
+          "bytes": 3394,
+          "sha256": "24555f990e5ce6eab4dfef81c8e9201b827e6e8141d5675d3ed601d3a4232a37"
+        },
+        {
+          "path": "src/services/ledger.ts",
+          "bytes": 720,
+          "sha256": "f9d8c376df910f81a6ef7753e37d60f887fa8f6306f1cb897ab14b4e822c634c"
+        },
+        {
+          "path": "src/services/persistence.ts",
+          "bytes": 3676,
+          "sha256": "4a434622f332f6da3ad47261d33a37109677065ba71fbcef92947c65e01b031e"
+        },
+        {
+          "path": "src/stores/index.ts",
+          "bytes": 2587,
+          "sha256": "88fe31162b853caeed396730535828b6dcd69197963b3d78d649d46366f9d24c"
+        },
+        {
+          "path": "src/styles/art.css",
+          "bytes": 21688,
+          "sha256": "4ac28c97a95d39ef9bf5cbd4b18d81d7fa24a1f7c3e11af4462ae9c9936088c5"
+        },
+        {
+          "path": "src/styles/tokens.css",
+          "bytes": 10578,
+          "sha256": "09eaf93338e0b157f9768e2bf2106258b2c37fc7ccf297f9a0f2b27ae9d6546d"
+        },
+        {
+          "path": "tests/services.test.ts",
+          "bytes": 7005,
+          "sha256": "88364395dbd619f9a0dc29e22bd8ac817d960facec967ce143b61e931b2a5775"
+        },
+        {
+          "path": "tests/voyage.test.ts",
+          "bytes": 12455,
+          "sha256": "573da946b12def26b49e82fe8d168480f989a0cc3dd899c4fbef9b16e6552ab6"
+        },
+        {
+          "path": "tsconfig.json",
+          "bytes": 341,
+          "sha256": "5b2007204e3846226fa5534a10f0819af9865b05cf9313eb1e2a743363bd1672"
+        },
+        {
+          "path": "vite.config.ts",
+          "bytes": 198,
+          "sha256": "22dbb9106d50b8ed6418190b7445168d241d35764f196576b34ada513f08fba8"
+        }
+      ]
+    },
+    "tianxia-original-specifications.zip": {
+      "sha256": "513673974f0e390b34948d944bcf6c767f1d5c519c91ee48bda8749b642ac3dd",
+      "bytes": 99864,
+      "files": [
+        {
+          "path": "work_天下商路遊戲討論/00_PROJECT_INDEX.md",
+          "bytes": 3400,
+          "sha256": "8afcb181257e826185a5b6c6f49c3ed8982258cd8eff997a2cabe9ee4b75dd8b"
+        },
+        {
+          "path": "work_天下商路遊戲討論/01_GAME_OVERVIEW.md",
+          "bytes": 2026,
+          "sha256": "4b243702af077cf41c2e69bb886e1a8da710bd78653ac154a76a3667f5e531bb"
+        },
+        {
+          "path": "work_天下商路遊戲討論/02_ROADMAP.md",
+          "bytes": 2104,
+          "sha256": "7f594dd0bde549794da4113953e82a405b5c865b260707b541427bfc531cab00"
+        },
+        {
+          "path": "work_天下商路遊戲討論/03_WORLD_AND_ECONOMY.md",
+          "bytes": 5896,
+          "sha256": "d2b7a22f056d31e48d7e4cf754b4f9c78e0217a886fd673d163b0542626c2dd7"
+        },
+        {
+          "path": "work_天下商路遊戲討論/04_CITY_INVESTMENT.md",
+          "bytes": 2132,
+          "sha256": "719d4238bdb120da274a48701386d3754608c8f94b7b129ea12102eab13a2dce"
+        },
+        {
+          "path": "work_天下商路遊戲討論/05_FLEET_AND_CHARACTERS.md",
+          "bytes": 2412,
+          "sha256": "ba47b4d45fce382aeae400430853579f3a33ff8ed2d3f8dc7b425e2823b44564"
+        },
+        {
+          "path": "work_天下商路遊戲討論/06_FRONTEND_OVERVIEW.md",
+          "bytes": 1789,
+          "sha256": "41910efee631d4f4bfb24107f5b9c1bbd5ce79bccae7ed1b7d026c4e07ddbdca"
+        },
+        {
+          "path": "work_天下商路遊戲討論/07_INFORMATION_ARCHITECTURE.md",
+          "bytes": 1837,
+          "sha256": "2c8db7c058b0f92c59cee91671df443d9347c8f80302e1ddf5acf617a520e3f1"
+        },
+        {
+          "path": "work_天下商路遊戲討論/08_SCREEN_MAP.md",
+          "bytes": 1579,
+          "sha256": "89fe31e7791f5ce92f10897bbc211821d06db7efa3ad2506fd6518e34e3bf70e"
+        },
+        {
+          "path": "work_天下商路遊戲討論/09_USER_FLOW.md",
+          "bytes": 1957,
+          "sha256": "d2ef0e6ae0b16e6903a29efa1b400dd0fe24fbcf97869747962dc7e526bbd0b9"
+        },
+        {
+          "path": "work_天下商路遊戲討論/10_SCREEN_SPEC.md",
+          "bytes": 6409,
+          "sha256": "df5c2e72e8ecba27b33e4af421fbb31e6e736f85de5325da198e4d1db4f567f8"
+        },
+        {
+          "path": "work_天下商路遊戲討論/11_DESIGN_SYSTEM.md",
+          "bytes": 2486,
+          "sha256": "bc45a5175989c3dd9fb04e001abf75363bf23b1c2019adfed3bf9df1956bfcef"
+        },
+        {
+          "path": "work_天下商路遊戲討論/12_COMPONENT_ARCHITECTURE.md",
+          "bytes": 2785,
+          "sha256": "3979e5135cfa4697aeadd14035aaa60f1813bb82a47de75fd92dc9a127f3260d"
+        },
+        {
+          "path": "work_天下商路遊戲討論/13_RESPONSIVE_SPEC.md",
+          "bytes": 1596,
+          "sha256": "da6d26b8e8824f0ff0bdd74f6b959a61c6e1c5d1574db5192d60edfcbf32a8c4"
+        },
+        {
+          "path": "work_天下商路遊戲討論/14_ASSET_REQUIREMENTS.md",
+          "bytes": 2557,
+          "sha256": "fe37d4b9aff04e478e70d82a49addbf793ad13238c1406beea7d110b7f30b6ce"
+        },
+        {
+          "path": "work_天下商路遊戲討論/15_CODEX_FRONTEND_HANDOFF.md",
+          "bytes": 2515,
+          "sha256": "cc1a6f895bba02f18353912d5eb7b73813ac0c092c9367e2f8ec0c87294735b1"
+        },
+        {
+          "path": "work_天下商路遊戲討論/16_WORK_MASTER_PROMPT.md",
+          "bytes": 4691,
+          "sha256": "c14f11f9f591b39593f17324dd22d3be1123cb2d313321f0f39da2faf3665ad5"
+        },
+        {
+          "path": "work_天下商路遊戲討論/17_SOURCE_AND_DECISION_LOG.md",
+          "bytes": 2558,
+          "sha256": "6ef43bebc2714bc082ef8525ce144b8e8a1d72d6956a687035eeb5763b19fab6"
+        },
+        {
+          "path": "work_天下商路遊戲討論/18_IMPORT_STATUS.md",
+          "bytes": 1641,
+          "sha256": "6ef16c1278d0a777c46fe8a473698d8cb1e969784be4b98c41e0b9be3ec97c0e"
+        },
+        {
+          "path": "work_天下商路遊戲討論/MANIFEST.json",
+          "bytes": 2371,
+          "sha256": "d318a984f217dcc90b9ea55cc368a05ddb4bc849fc9d62ed2675a289263eb918"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/00_PROJECT_INDEX.md",
+          "bytes": 4264,
+          "sha256": "cddabcaa7835b96c915df097616cd309240a0518bc566299d7ed5f5278174478"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/01_GAME_OVERVIEW.md",
+          "bytes": 2296,
+          "sha256": "118d63c7242a8f91ebde99e50ee11a63951e30108771e1d9b14b277f9d46dd89"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/02_ROADMAP.md",
+          "bytes": 1988,
+          "sha256": "a8ae3822e2282aeb446f8db7d80167943f56e18d2d59122bb7c53ccf0167888a"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/03_WORLD_AND_ECONOMY.md",
+          "bytes": 6357,
+          "sha256": "fe4b44fc28adde03a5c2da2619740a7b7866e99ceb9541358944a5440c8ec64c"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/04_CITY_INVESTMENT.md",
+          "bytes": 1818,
+          "sha256": "042ed5465b875eee77fe04010e9485ee2c28117596858b5e905a60151bfcc7ab"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/05_FLEET_AND_CHARACTERS.md",
+          "bytes": 1399,
+          "sha256": "c7db5716cb54c059145dfe286e0ab599fc852c4b84321d82a698004ebe4b9659"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/06_FRONTEND_OVERVIEW.md",
+          "bytes": 1860,
+          "sha256": "6d106501c20a1cf9f535f28c596a7ee1f71f63a7ca5116bdc71025804e78c7e6"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/07_INFORMATION_ARCHITECTURE.md",
+          "bytes": 1957,
+          "sha256": "f02b531824d51f387306021eaf33bc6499126d678cfc27d0d70fdd916cf4bc45"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/08_SCREEN_MAP.md",
+          "bytes": 1629,
+          "sha256": "f26d2c549f2c5ff654d348ba6dc0681a5fe9173160e6067cdb5b86d6d9f96f93"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/09_USER_FLOW.md",
+          "bytes": 2159,
+          "sha256": "298d7de61751907e644ec468d2d0761d88f7cd4b417bfe06862abc1d1073c5e9"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/10_SCREEN_SPEC.md",
+          "bytes": 5466,
+          "sha256": "f69bf8abfe77a0a892c435a16690bc46a13a900e93c86cd4404b0be29fdf7ed6"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/11_DESIGN_SYSTEM.md",
+          "bytes": 3416,
+          "sha256": "9f2752033f09917eab61847e57dfaf8c027760d6f20369177e746d6069af8bcf"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/12_COMPONENT_ARCHITECTURE.md",
+          "bytes": 4795,
+          "sha256": "341697c274658d2b28cb2caee86e7cacf982803bea4af858b14192df53b5c790"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/13_RESPONSIVE_SPEC.md",
+          "bytes": 1531,
+          "sha256": "380b7019a02e36a7e7a17d38e32a65a772ebcd868eac7225ce8d694ffaeb9532"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/14_ASSET_REQUIREMENTS.md",
+          "bytes": 2557,
+          "sha256": "faf56070087bd2ef9063eced8fb35c26c4a29987093df0146fe3d234ee586742"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/15_CODEX_FRONTEND_HANDOFF.md",
+          "bytes": 4693,
+          "sha256": "2a644243e1cedaa7693d9bb2287d0ad00b0ae410349723da9defc4190894403d"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/16_WORK_MASTER_PROMPT.md",
+          "bytes": 2361,
+          "sha256": "957a02a4d4681998919b7fa1aa4cd285731c44ef2edd422eb054e9efce6002a6"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/17_SOURCE_AND_DECISION_LOG.md",
+          "bytes": 4250,
+          "sha256": "54ab475bc44dd01da2c31a13e0e4856069d2f326282839ae3291465bd6ed808a"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/18_IMPORT_STATUS.md",
+          "bytes": 1220,
+          "sha256": "b624e45eede90aa7cdc0cbd929bbfcd6041c4ff145e434b15b194c42d7dff890"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/19_UI_WIREFRAMES.md",
+          "bytes": 25009,
+          "sha256": "2ba5d3849d109377b1d145dc1ba4dc84a6e40cfaa41100e4bbcc0f40007ef0d8"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/20_DATA_CONTRACTS.md",
+          "bytes": 10412,
+          "sha256": "a8aabae69cd4c86ae06202b6147d2511051dc7246139ca2b0f3343f5c80fa645"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/21_FRONTEND_IMPLEMENTATION_PLAN.md",
+          "bytes": 5225,
+          "sha256": "04621a368eb29d5fabbb2359b95d08123231e651b20de821e88ad8becd175b5a"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/22_M0_FIXTURES_AND_ACCEPTANCE.md",
+          "bytes": 4326,
+          "sha256": "215126bc15ca6aabe8e77424c1ca926b853eaa0567ec827a5a659c4b2209d333"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/CHANGELOG.md",
+          "bytes": 3888,
+          "sha256": "911618b2b5282e3045082f3de8fc655d345bd0bfa2497a40f8be7178b519e67d"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/MANIFEST.json",
+          "bytes": 5523,
+          "sha256": "e876c87824e15456c9170c866ec532fa188905c73c56a06b2ea38fe7b296e7f7"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/VALIDATION_REPORT.md",
+          "bytes": 1734,
+          "sha256": "b585f7e18f84104d08f2a53b594112e6c6d0853fd840b5873aacce53413e0ae8"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/support/contracts.ts",
+          "bytes": 6632,
+          "sha256": "9497a38de2eae8d65d8c377f9cc39fc7ff71e4f0bf16566d5356b98ab86b5efc"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/support/mock-fixture.json",
+          "bytes": 20301,
+          "sha256": "30fda24fb4276554afaf9194cdb2b32dc049bc614aae61607e2e3e16bfb91202"
+        },
+        {
+          "path": "work_天下商路遊戲討論_v1.1/support/mockData.ts",
+          "bytes": 508,
+          "sha256": "e78e78529ae18649ccdda791b120de1688ed1af61cd5d9fe853d72f2b0807229"
+        }
+      ]
+    }
+  },
+  "specificationScope": "Necessary design documents and support data only; excludes private historical conversations, sources directories and original ZIPs."
+}
