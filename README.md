@@ -75,3 +75,5 @@ node scripts/save-browser-check.mjs
 ## 延後
 
 動態價格引擎、正式平衡、隨機Risk Event、真實風險概率、離線安裝、投資、人物、水手、多船／旗艦、自動商隊、外交海戰與後端帳號。風險數字本階段僅提示，不觸發扣款／損失。
+
+正式站六尺寸往返及3項儲存例外檢查已通過，結果 `artifacts/v1-voyage/live/` 與 `live-save/`。

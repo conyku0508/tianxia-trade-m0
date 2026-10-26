@@ -1,0 +1,89 @@
+{
+  "base": "https://conyku0508.github.io/tianxia-trade-m0/",
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "status": "PASS",
+      "roundtrip": {
+        "city": "quanzhou",
+        "day": 18,
+        "cash": 5945,
+        "netProfit": 945
+      },
+      "checks": "cancel/duplicate departure, duplicate turn, blocked sea trade, mid-voyage reload, live knowledge, two-port30-goods, export/import/cancel/corrupt/reset, fare shortage, test guide",
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "PASS",
+      "roundtrip": {
+        "city": "quanzhou",
+        "day": 18,
+        "cash": 5945,
+        "netProfit": 945
+      },
+      "checks": "cancel/duplicate departure, duplicate turn, blocked sea trade, mid-voyage reload, live knowledge, two-port30-goods, export/import/cancel/corrupt/reset, fare shortage, test guide",
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "status": "PASS",
+      "roundtrip": {
+        "city": "quanzhou",
+        "day": 18,
+        "cash": 5945,
+        "netProfit": 945
+      },
+      "checks": "cancel/duplicate departure, duplicate turn, blocked sea trade, mid-voyage reload, live knowledge, two-port30-goods, export/import/cancel/corrupt/reset, fare shortage, test guide",
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "status": "PASS",
+      "roundtrip": {
+        "city": "quanzhou",
+        "day": 18,
+        "cash": 5945,
+        "netProfit": 945
+      },
+      "checks": "cancel/duplicate departure, duplicate turn, blocked sea trade, mid-voyage reload, live knowledge, two-port30-goods, export/import/cancel/corrupt/reset, fare shortage, test guide",
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "status": "PASS",
+      "roundtrip": {
+        "city": "quanzhou",
+        "day": 18,
+        "cash": 5945,
+        "netProfit": 945
+      },
+      "checks": "cancel/duplicate departure, duplicate turn, blocked sea trade, mid-voyage reload, live knowledge, two-port30-goods, export/import/cancel/corrupt/reset, fare shortage, test guide",
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "PASS",
+      "roundtrip": {
+        "city": "quanzhou",
+        "day": 18,
+        "cash": 5945,
+        "netProfit": 945
+      },
+      "checks": "cancel/duplicate departure, duplicate turn, blocked sea trade, mid-voyage reload, live knowledge, two-port30-goods, export/import/cancel/corrupt/reset, fare shortage, test guide",
+      "errors": [],
+      "bad": []
+    }
+  ]
+}

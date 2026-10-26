@@ -120,3 +120,12 @@ UI限定修改 `MapPage.vue` 與 `art.css`，手機寬度<768px時改為小港�
 - 手機390及桌面1440航行／到港／累計帳截圖已保存並檢視，沿用既有美術與底部五入口。
 - 測試曾發現Pinia Proxy不能structuredClone，已改逐層複製情報歷史，完整測試後通過。
 - 型別與production build通過。動態價格、隨機風險、離線、投資、多船、帳號與跨裝置同步未實作或驗證。Chrome模擬尺寸不等於真機Safari、觸控及軟鍵盤驗收，仍須使用者裝置測試。
+
+
+### V1正式站驗收完成
+
+執行版commit `4bc9ad14f3f6e4c4f2d32d363080d840ba0e0236`，GitHub Actions [40269992900](https://github.com/conyku0508/tianxia-trade-m0/actions/runs/40269992900) test／build／deploy均success。
+
+正式HTTPS來源六尺寸完整往返腳本全部PASS：`artifacts/v1-voyage/live/results.json`，同樣實際完成泉州day12→琉球day15→泉州day18、現金5945、盈虧945、途中reload與備份還原；沒有pageerror或失敗資源。正式來源的配額／分頁衝突／備份復原3項亦PASS，結果 `artifacts/v1-voyage/live-save/results.json`。兩次測試皆使用獨立headless context，不操作使用者目前分頁的存檔。
+
+手機操作說明已上線於 `/help`；實體手機與Safari仍須使用者試玩，未以Chrome viewport冒充真機。
